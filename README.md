@@ -4,6 +4,9 @@
 To clone this repository, you will need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)).
 
 ```bash
+
+#env:NODE_OPTIONS=--openssl-legacy-provider
+
 # Clone this repository
 git clone https://github.com/kapaha/math-castle.git
 
