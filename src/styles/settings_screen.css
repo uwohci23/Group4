@@ -1,0 +1,210 @@
+/*
+	@name settings_screen
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__settings_screen {
+	opacity:0.9;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	background:rgba(22,182,218,1);
+}
+
+
+#cloud {
+	top: 194px;
+	left: 403px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek1 {
+	top: 733px;
+	left: -129px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek2 {
+	top: 132px;
+	left: 1394px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek3 {
+	top: 647px;
+	left: 1288px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#rectangle_22 {
+	top: 643.5px;
+	left: 666px;
+	width: 116px;
+	height: 115px;
+}
+
+
+#rectangle_15 {
+	opacity:0.75;
+	top: 35px;
+	left: 67px;
+	width: 1787px;
+	height: 953px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	-ms-box-shadow:20px 20px 4px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:20px 20px 4px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:20px 20px 4px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:20px 20px 4px 1px rgba(0,0,0,0.25);
+	box-shadow:20px 20px 4px 1px rgba(0,0,0,0.25);
+	background:rgba(213,246,251,0.75);
+}
+
+
+#_rectangle_29 {
+	top: 813px;
+	left: 1530px;
+	width: 288px;
+	height: 124px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#back {
+	top: 851px;
+	left: 1625px;
+	width: 176px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+
+#rectangle_30 {
+	top: 35px;
+	left: 67px;
+	width: 1787px;
+	height: 104px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#settings {
+	top: 46px;
+	left: 154px;
+	width: 457px;
+	height: 123px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+
+#screen_size_ {
+	top: 275px;
+	left: 562px;
+	width: 370px;
+	height: 120px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#A6A6A6;
+}
+
+#window_dropdown {
+	top: 264px;
+	left: 984px;
+	width: 410px;
+	height: 108px;
+}
+
+#_1920_x_1080 {
+	top: 19px;
+	left: 28px;
+	width: 364px;
+	height: 104px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#resolution_ {
+	top: 416px;
+	left: 562px;
+	width: 370px;
+	height: 120px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#A6A6A6;
+}
+
+#resolution_dropdown {
+	top: 405px;
+	left: 982px;
+	width: 410px;
+	height: 108px;
+}
+
+#_1920_x_1080_ek1 {
+	top: 19px;
+	left: 28px;
+	width: 364px;
+	height: 104px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+
+/* Add your custom CSS here */

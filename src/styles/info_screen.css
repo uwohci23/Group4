@@ -1,0 +1,185 @@
+/*
+	@name info_screen
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__info_screen {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	background:rgba(22,182,218,1);
+}
+
+
+#cloud {
+	top: 71px;
+	left: 1045px;
+	width: 712px;
+	height: 434px;
+}
+
+
+#cloud_ek1 {
+	top: 318px;
+	left: 210px;
+	width: 507px;
+	height: 328px;
+}
+
+
+#cloud_ek2 {
+	top: 719px;
+	left: 1441px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#cloud_ek3 {
+	top: 841px;
+	left: 114px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#cloud_ek4 {
+	top: 40px;
+	left: 46px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#_rectangle_34 {
+	top: 871px;
+	left: 1420px;
+	width: 424px;
+	height: 122px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#_rectangle_41 {
+	top: 142px;
+	left: 276px;
+	width: 1367px;
+	height: 680px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#continue {
+	top: 902px;
+	left: 1502px;
+	width: 297px;
+	height: 95px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#_rectangle_42 {
+	top: 871px;
+	left: 114px;
+	width: 424px;
+	height: 122px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#back {
+	top: 902px;
+	left: 196px;
+	width: 297px;
+	height: 95px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#how_to_play {
+	top: 169px;
+	left: 641px;
+	width: 657px;
+	height: 182px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 90px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#solve_the_math_formula_and_click_enter {
+	top: 339px;
+	left: 1101px;
+	width: 505px;
+	height: 406px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#switch_between_monsters_using_wasd_buttons {
+	top: 665px;
+	left: 298px;
+	width: 817px;
+	height: 170px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#image_3 {
+	top: 325px;
+	left: 468px;
+	width: 463px;
+	height: 347px;
+}
+
+
+
+/* Add your custom CSS here */
