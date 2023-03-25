@@ -24,6 +24,46 @@
 		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 		<!-- Add your custom HEAD content here -->
 
+		<script>
+			// Listen for click events on mode and difficulty dropdowns
+			document.getElementById("single_player").addEventListener("click", function() {
+				// Save the selected mode to localStorage
+				localStorage.setItem("mode", "single_player");
+			});
+			
+			document.getElementById("normal").addEventListener("click", function() {
+				// Save the selected difficulty to localStorage
+				localStorage.setItem("difficulty", "normal");
+			});
+			
+			// Listen for click events on map options
+			document.getElementById("map_2").addEventListener("click", function() {
+				// Save the selected map to localStorage
+				localStorage.setItem("map", "map_2");
+			});
+			
+			// Listen for click events on map options
+			document.getElementById("map_3").addEventListener("click", function() {
+				// Save the selected map to localStorage
+				localStorage.setItem("map", "map_3");
+			});
+			
+			// Listen for click events on map options
+			document.getElementById("map_4").addEventListener("click", function() {
+				// Save the selected map to localStorage
+				localStorage.setItem("map", "map_4");
+			});
+			
+			// Listen for click events on map options
+			document.getElementById("map_5").addEventListener("click", function() {
+				// Save the selected map to localStorage
+				localStorage.setItem("map", "map_5");
+			});
+			
+			// Add similar listeners for other map options
+			
+		</script>
+
 	</head>
 	<body>
 		<div id="content-container" >
@@ -47,7 +87,10 @@
 				Difficulty: 
 			</div>
 			<a id="_rectangle_42_link" href="game_screen.html" >
-			<div id="_rectangle_42"  ></div>
+				<div id="_rectangle_42"  ></div>
+				<div id="start_" >
+					Start!
+				</div>
 			</a>
 			<div id="rectangle_43"  ></div>
 			<div id="rectangle_45"  ></div>
@@ -58,15 +101,14 @@
 			<div id="map_4" >
 				Map 4
 			</div>
-			<div id="start_" >
-				Start!
-			</div>
+
 			<a id="_rectangle_51_link" href="info_screen.html" >
-			<div id="_rectangle_51"  ></div>
+				<div id="_rectangle_51"  ></div>
+				<div id="back" >
+					Back
+				</div>
 			</a>
-			<div id="back" >
-				Back
-			</div>
+
 			<div id="map_8" >
 				Map 8
 			</div>
