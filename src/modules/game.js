@@ -16,7 +16,6 @@ const GAMESTATES = {
     PAUSED: 3,
 };
 
-const startPage = document.querySelector('#start-page');
 const gamePage = document.querySelector('#game-page');
 const gameOverPage = document.querySelector('#game-over-page');
 const difficultySelectPage = document.querySelector('#difficulty-select-page');
