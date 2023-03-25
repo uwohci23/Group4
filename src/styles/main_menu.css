@@ -2,7 +2,7 @@
 	@name main_menu
 */
 /* Only edit this if you know what you are doing! */
-body { height: 120vh; margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
 
 /* Only edit this if you know what you are doing! */
 img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
@@ -10,14 +10,14 @@ img { position: absolute; display: block; margin: 0px; border: none; padding: 0p
 /* Only edit this if you know what you are doing! */
 div { position: absolute; }
 
-#content-container { display: block; position: relative; height: 100%; width: 1700px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+#content-container { display: block; position: relative; height: 1080px; width: 1920px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
 
 #_bg__main_menu {
 	opacity:0.9;
 	top: 0px;
 	left: 0px;
-	width: 1700px;
-	height: 1000px;
+	width: 1920px;
+	height: 1080px;
 	background:rgba(22,182,218,1);
 }
 
@@ -123,8 +123,8 @@ div { position: absolute; }
 #_rectangle_30 {
 	top: 79px;
 	left: 1072px;
-	width: 500px;
-	height: 130px;
+	width: 695px;
+	height: 154px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -137,8 +137,8 @@ div { position: absolute; }
 #rectangle_33 {
 	top: 837px;
 	left: 1072px;
-	width: 500px;
-	height: 130px;
+	width: 695px;
+	height: 154px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -151,8 +151,8 @@ div { position: absolute; }
 #_rectangle_32 {
 	top: 584px;
 	left: 1072px;
-	width: 500px;
-	height: 130px;
+	width: 695px;
+	height: 154px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -165,8 +165,8 @@ div { position: absolute; }
 #_rectangle_31 {
 	top: 332px;
 	left: 1072px;
-	width: 500px;
-	height: 130px;
+	width: 695px;
+	height: 154px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -178,12 +178,12 @@ div { position: absolute; }
 
 #settings {
 	top: 625px;
-	left: 1150px;
-	width: 350px;
-	height: 100px;
+	left: 1207px;
+	width: 441px;
+	height: 122px;
 	overflow: hidden;
 	font-family: Inter;
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
@@ -192,12 +192,12 @@ div { position: absolute; }
 
 #exit {
 	top: 877px;
-	left: 1150px;
-	width: 350px;
+	left: 1207px;
+	width: 441px;
 	height: 122px;
 	overflow: hidden;
 	font-family: Inter;
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
@@ -206,12 +206,12 @@ div { position: absolute; }
 
 #skills {
 	top: 372px;
-	left: 1150px;
-	width: 350px;
+	left: 1207px;
+	width: 441px;
 	height: 122px;
 	overflow: hidden;
 	font-family: Inter;
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
@@ -220,12 +220,12 @@ div { position: absolute; }
 
 #play {
 	top: 119px;
-	left: 1150px;
-	width: 350px;
+	left: 1207px;
+	width: 441px;
 	height: 122px;
 	overflow: hidden;
 	font-family: Inter;
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
