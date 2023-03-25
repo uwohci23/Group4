@@ -63,8 +63,8 @@ div { position: absolute; }
 
 
 #_rectangle_1 {
-	top: 658px;
-	left: 587px;
+	top: 570px;
+	left: 600px;
 	width: 500px;
 	height: 120px;
 	-ms-border-radius: 20px;
@@ -83,7 +83,7 @@ div { position: absolute; }
 
 
 #click_to_start {
-	top: 690px;
+	top: 600px;
 	left: 540px;
 	width: 600px;
 	overflow: hidden;
@@ -98,7 +98,7 @@ div { position: absolute; }
 
 
 #image_1 {
-	top: 156px;
+	top: 110px;
 	left: 400px;
 	width: 900px;
 	height: 439px;

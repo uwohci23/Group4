@@ -2,7 +2,7 @@
 	@name info_screen
 */
 /* Only edit this if you know what you are doing! */
-body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden;}
 
 /* Only edit this if you know what you are doing! */
 img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
@@ -10,13 +10,13 @@ img { position: absolute; display: block; margin: 0px; border: none; padding: 0p
 /* Only edit this if you know what you are doing! */
 div { position: absolute; }
 
-#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+#content-container { display: block; position: relative; width: 1700px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
 
 #_bg__info_screen {
 	top: 0px;
 	left: 0px;
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+	height: 100%;
 	background:rgba(22,182,218,1);
 }
 
@@ -63,7 +63,7 @@ div { position: absolute; }
 
 #_rectangle_34 {
 	top: 871px;
-	left: 1420px;
+	left: 1150px;
 	width: 424px;
 	height: 122px;
 	-ms-border-radius: 25px;
@@ -77,8 +77,8 @@ div { position: absolute; }
 
 #_rectangle_41 {
 	top: 142px;
-	left: 276px;
-	width: 1367px;
+	left: 250px;
+	width: 1200px;
 	height: 680px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
@@ -91,7 +91,7 @@ div { position: absolute; }
 
 #continue {
 	top: 902px;
-	left: 1502px;
+	left: 1220px;
 	width: 297px;
 	height: 95px;
 	overflow: hidden;
@@ -119,7 +119,7 @@ div { position: absolute; }
 
 #back {
 	top: 902px;
-	left: 196px;
+	left: 180px;
 	width: 297px;
 	height: 95px;
 	overflow: hidden;
@@ -133,7 +133,7 @@ div { position: absolute; }
 
 #how_to_play {
 	top: 169px;
-	left: 641px;
+	left: 500px;
 	width: 657px;
 	height: 182px;
 	overflow: hidden;
@@ -147,7 +147,7 @@ div { position: absolute; }
 
 #solve_the_math_formula_and_click_enter {
 	top: 339px;
-	left: 1101px;
+	left: 950px;
 	width: 505px;
 	height: 406px;
 	overflow: hidden;
@@ -161,8 +161,8 @@ div { position: absolute; }
 
 #switch_between_monsters_using_wasd_buttons {
 	top: 665px;
-	left: 298px;
-	width: 817px;
+	left: 300px;
+	width: 800px;
 	height: 170px;
 	overflow: hidden;
 	font-family: Inter;
@@ -175,7 +175,7 @@ div { position: absolute; }
 
 #image_3 {
 	top: 325px;
-	left: 468px;
+	left: 450px;
 	width: 463px;
 	height: 347px;
 }
