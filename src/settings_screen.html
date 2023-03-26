@@ -13,58 +13,67 @@
  *
 */
  -->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
-	<head>
-		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>settings_screen</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="" >
-		<link rel="StyleSheet" href="./styles/settings_screen.css" />
-		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-		<!-- Add your custom HEAD content here -->
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+     <head>
+         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+         <title>settings_screen</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="" >
+         <link rel="StyleSheet" href="sets.css" />
+         <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+         <!-- Add your custom HEAD content here -->
+     </head>
+     <body>
+         <div id="content-container" >
+             <div id="_bg__settings_screen"  ></div>
+             <img src="images/cloud5.png" id="cloud" />
+             <img src="images/cloud_ek15.png" id="cloud_ek1" />
+             <img src="images/cloud_ek25.png" id="cloud_ek2" />
+             <img src="images/cloud_ek35.png" id="cloud_ek3" />
+             <img src="images/rectangle_225.png" id="rectangle_22" />
+             <div id="rectangle_15"  ></div>
 
-	</head>
-	<body>
-		<div id="content-container" >
-			<div id="_bg__settings_screen"  ></div>
-			<img src="images/cloud5.png" id="cloud" />
-			<img src="images/cloud_ek15.png" id="cloud_ek1" />
-			<img src="images/cloud_ek25.png" id="cloud_ek2" />
-			<img src="images/cloud_ek35.png" id="cloud_ek3" />
-			<img src="images/rectangle_225.png" id="rectangle_22" />
-			<div id="rectangle_15"  ></div>
-			<a id="_rectangle_29_link" href="./main_menu.html" >
-			<div id="_rectangle_29"  ></div>
-			</a>
-			<div id="back" >
-				Back
-			</div>
-			<div id="rectangle_30"  ></div>
-			<div id="settings" >
-				Settings
-			</div>
-			<div id="screen_size_" >
-				Screen Size:
-			</div>
+             <a id="_rectangle_29_link" href="./main_menu.html" >
+                <div id="_rectangle_29"  ></div>
+                <div id="back" >
+                   Back
+                 </div>
+             </a>
+             
+             <div id="rectangle_30"  ></div>
+             <div id="settings" >
+                 Settings
+             </div>
+             <div id="screen_size_" >
+                 Screen Size:
+             </div>
+ 
+             <div id="window_dropdown">
+                <select id="screen">
+                        <option id="_1280_x_720" value="0">1280 x 720</option>
+                        <option id="_1920_x_1080" value="1">1920 x 1080</option>
+                </select>
+ 
+             </div>
+             
+             <!--this is for Audio volume -->
+             <div id="resolution_" >
+                Audio Volume:
+             </div>
+ 
+             <div id="resolution_dropdown"  >
+                <select id="resolution">
 
-			<div id="window_dropdown"  >
-				<div id="_1920_x_1080" >
-					Fullscreen
-				</div>
+                        <option id="_nonevolume" value="nonevol">None</option>
+                        <option id="_lowvolume" value="Lowvol">Low</option>
+                        <option id="_mediumvolume" value="Mediumvol">Medium</option>
+                        <option id="_highvolume" value="Highvol">High</option>
 
-			</div>
-			<div id="resolution_" >
-				Resolution: test
-			</div>
 
-			<div id="resolution_dropdown"  >
-				<div id="_1920_x_1080_ek1" >
-					1920 x 1080
-				</div>
-
-			</div>
-
-		</div>
-	</body>
-</html>
+                </select>
+             </div>
+ 
+         </div>
+     </body>
+ </html>
