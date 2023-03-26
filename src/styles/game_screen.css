@@ -1,5 +1,5 @@
 :root {
-    --game-board-height: 345px;
+    --game-board-height: 400px;
     --ui-green: #47bf85;
     --ui-brown: #ce7f54;
     --ui-text: #f3f2c9;
@@ -175,7 +175,7 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    display: none;
+    display: flex;
     flex-direction: column;
     top: 0;
     z-index: 0;
@@ -188,14 +188,14 @@ h2 {
 }
 
 #game-board {
-    background-image: url('../img/map1.png');
-    background-size: 54cm 11cm;
+    background-image: url('../img/map.png');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 17px;
     display: flex;
     margin: auto;
     background-color: rgb(69, 115, 136);
-    height: var(--game-board-height);
+    height: var(--game-board-height) ;
     width: 1000px;
     position: relative;
     overflow: hidden;

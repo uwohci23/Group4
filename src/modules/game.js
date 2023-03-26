@@ -9,6 +9,8 @@ import { hideElement, showElement } from './domUtils';
 import Engine from './engine';
 import populateQuestionHistory from './questionHistory';
 
+import mapImage from '../img/map1.png';
+import mapImage2 from '../img/map2.png';
 const GAMESTATES = {
     MENU: 0,
     RUNNING: 1,
@@ -16,10 +18,10 @@ const GAMESTATES = {
     PAUSED: 3,
 };
 
-window.addEventListener("DOMContentLoaded", function() {
-    var gameBoardMap = document.getElementById("game-board");
+document.addEventListener("DOMContentLoaded", function () {
+    var gameBoardMap = document.querySelector('#game-board');
     var map = localStorage.getItem("map");
-    var imagePath = "./img/" + map + ".png";
+    var imagePath = "./images/" + map + ".png";
     console.log("Setting background image to:", imagePath); // Add this line
     gameBoardMap.style.backgroundImage = "url('" + imagePath + "')";
 });
@@ -243,9 +245,8 @@ function handleHomeButtonClick() {
 // PUBLIC FUNCTIONS
 
 function init() {
-    showElement(gamePage, 'flex');
+    //showElement(gamePage, 'flex');
     start(selectedDifficulty);
-
     restartButton.addEventListener('click', restart);
     pauseButton.addEventListener('click', handlePause);
     answerForm.addEventListener('submit', handleAnswerSubmit);

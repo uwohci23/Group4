@@ -1,10 +1,10 @@
 // \u00D7 is the unicode symbol for multiplication and \u00F7 for division in Javascript.
 
 const operatorDifficulty = {
-    easy: ['+', '-'],
-    medium: ['+', '-', '\u00D7'],
-    hard: ['+', '-', '\u00D7'],
-    insane: ['+', '-', '\u00D7', '\u00F7'],
+    Easy: ['+', '-'],
+    Medium: ['+', '-', '\u00D7'],
+    Hard: ['+', '-', '\u00D7'],
+    Insane: ['+', '-', '\u00D7', '\u00F7'],
 };
 
 const wholeNumberGenerator = (number) => Math.floor(Math.random() * number);
