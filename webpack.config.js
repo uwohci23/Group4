@@ -12,7 +12,7 @@ module.exports = {
         profile_screen: path.resolve(__dirname, './src/profile_screen.html'), // Add settings_screen.html to the entry
         inital_game_options_screen: path.resolve(__dirname, './src/inital_game_options_screen.html'), // Add settings_screen.html to the entry
         loss_victory_screen: path.resolve(__dirname, './src/loss_victory_screen.html'), // Add settings_screen.html to the entry
-        game_screen: path.resolve(__dirname, './src/gameScreen.html'), // Add settings_screen.html to the entry
+        game_screen: path.resolve(__dirname, './src/game_screen.js'), // Add settings_screen.html to the entry
     },
 
     module: {
