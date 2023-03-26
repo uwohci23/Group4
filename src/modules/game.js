@@ -16,10 +16,14 @@ const GAMESTATES = {
     PAUSED: 3,
 };
 
-var gameBoard = document.getElementById("game-board");
-var map = localStorage.getItem("map");
-var imagePath = "./img/" + map + ".png";
-gameBoard.style.backgroundImage = "url('" + imagePath + "')";
+window.addEventListener("DOMContentLoaded", function() {
+    var gameBoardMap = document.getElementById("game-board");
+    var map = localStorage.getItem("map");
+    var imagePath = "./img/" + map + ".png";
+    console.log("Setting background image to:", imagePath); // Add this line
+    gameBoardMap.style.backgroundImage = "url('" + imagePath + "')";
+});
+
 
 const gamePage = document.querySelector('#game-page');
 const gameOverPage = document.querySelector('#game-over-page');
@@ -147,7 +151,7 @@ function damageCastle(amount) {
 function gameOver(titleText) {
     gameState = GAMESTATES.GAMEOVER;
     populateQuestionHistory(questionHistory, settings.lastAnswersToShow);
-    hideElement(gamePage);
+    //hideElement(gamePage);
     gameOverTitle.textContent = titleText || 'Game Over';
     showElement(gameOverPage, 'flex');
 }
@@ -232,7 +236,7 @@ function handleHomeButtonClick() {
     if (gameState === GAMESTATES.PAUSED) handlePause();
     engine.stop();
     gameState = GAMESTATES.MENU;
-    hideElement(gamePage);
+    //hideElement(gamePage);
     showElement(startPage, 'flex');
 }
 

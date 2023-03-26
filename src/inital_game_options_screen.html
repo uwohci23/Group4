@@ -49,13 +49,13 @@
 				rect.addEventListener("click", function () {
 				clearSelections();
 				rect.classList.add("selected");
-				localStorage.setItem("map", `map_${index + 1}`);
+				localStorage.setItem("map", `map${index + 1}`);
 				});
 			});
 	
 			// Set the first map rectangle as selected on page load
 			mapRectangles[0].classList.add("selected");
-			localStorage.setItem("map", "map_1");
+			localStorage.setItem("map", "map1");
 	
 			// Get mode and difficulty dropdowns
 			const modeSelect = document.getElementById("mode_select");
