@@ -16,16 +16,22 @@ const GAMESTATES = {
     PAUSED: 3,
 };
 
+var gameBoard = document.getElementById("game-board");
+var map = localStorage.getItem("map");
+var imagePath = "./img/" + map + ".png";
+gameBoard.style.backgroundImage = "url('" + imagePath + "')";
+
 const gamePage = document.querySelector('#game-page');
 const gameOverPage = document.querySelector('#game-over-page');
-const difficultySelectPage = document.querySelector('#difficulty-select-page');
+
 const answerForm = document.querySelector('.answer-form');
 const answerInput = document.querySelector('#answer-input');
 const gameTimer = document.querySelector('#game-timer');
-const startButton = document.querySelector('.start-button');
 const restartButton = document.querySelector('#restart-button');
 const pauseButton = document.querySelector('.pause-button');
-const difficultyButtons = document.querySelectorAll('[data-difficulty');
+
+const selectedDifficulty = localStorage.getItem("difficulty");
+
 const homeButton = document.querySelector('#home-button');
 const gameOverTitle = document.querySelector('#game-over-title');
 
@@ -233,13 +239,12 @@ function handleHomeButtonClick() {
 // PUBLIC FUNCTIONS
 
 function init() {
-    startButton.addEventListener('click', handleStartButtonClick);
+    showElement(gamePage, 'flex');
+    start(selectedDifficulty);
+
     restartButton.addEventListener('click', restart);
     pauseButton.addEventListener('click', handlePause);
     answerForm.addEventListener('submit', handleAnswerSubmit);
-    difficultyButtons.forEach((button) =>
-        button.addEventListener('click', handleDifficultySelect)
-    );
     homeButton.addEventListener('click', handleHomeButtonClick);
 }
 

@@ -188,7 +188,7 @@ h2 {
 }
 
 #game-board {
-    background-image: url('../img/field.png');
+    background-image: url('../img/map.png');
     background-size: 54cm 11cm;
     background-repeat: no-repeat;
     border-radius: 17px;

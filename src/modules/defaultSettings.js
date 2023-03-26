@@ -13,7 +13,7 @@ const DEFAULT_SETTINGS = {
     enemySpeedIncrement: 1,
     spawnTimerMs: 3500,
     gameTimerMs: 300000,
-    questionDifficulty: 'medium',
+    questionDifficulty: 'Medium',
     castleStartingLives: 3,
     lastAnswersToShow: 5,
 };

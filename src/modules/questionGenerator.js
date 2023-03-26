@@ -12,13 +12,13 @@ const wholeNumberGenerator = (number) => Math.floor(Math.random() * number);
 // Change difficulty here as this is the factor of multiplication that determines range of numbers.
 const generateDifficulty = (difficulty) => {
     switch (difficulty) {
-        case 'easy':
+        case 'Easy':
             return 5;
-        case 'medium':
+        case 'Medium':
             return 10;
-        case 'hard':
+        case 'Hard':
             return 30;
-        case 'insane':
+        case 'Insane':
             return 100;
         default:
             return 5;
