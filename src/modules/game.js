@@ -34,11 +34,13 @@ const answerForm = document.querySelector('.answer-form');
 const answerInput = document.querySelector('#answer-input');
 const gameTimer = document.querySelector('#game-timer');
 const restartButton = document.querySelector('#restart-button');
+const pauseRestartButton = document.querySelector('#pause-restart-button');
 const pauseButton = document.querySelector('.pause-button');
+const continueBtn = document.querySelector('#continueBtn');
 
 const selectedDifficulty = localStorage.getItem("difficulty");
 
-const homeButton = document.querySelector('#home-button');
+const homeButton = document.querySelector('#goHomeBtn');
 const gameOverTitle = document.querySelector('#game-over-title');
 
 const settings = { ...DEFAULT_SETTINGS };
@@ -257,12 +259,33 @@ function restart() {
     showElement(gamePage, 'flex');
     gameState = GAMESTATES.RUNNING;
 }
+/**
+ * Restart() hides the game over page and shows the game page, and then sets the game state to running
+ */
+function restart2() {
+    settings.enemySpeed = DEFAULT_SETTINGS.enemySpeed;
+    initialiseTimers();
+    scoreHandler.reset();
+    answerInput.value = '';
+    castle.setup(settings.castleStartingLives);
+    enemies.forEach((enemy) => enemy.handleDelete());
+    questionHistory = [];
+
+    engine.start();
+    pauseButton.textContent = "Pause";
+    gameState = GAMESTATES.RUNNING;
+    answerInput.disabled = false;
+    enemies.forEach((enemy) => enemy.element.classList.remove('not-clickable'));
+    hideElement(document.querySelector('#pauseMenu'));
+    gameState = GAMESTATES.RUNNING;
+}
 
 /**
  * It sets the game state to paused, disables the answer input, and adds the class 'not-clickable' to
  * all enemies
  */
 function pause() {
+    showElement(pauseMenu, 'flex');
     gameState = GAMESTATES.PAUSED;
     answerInput.disabled = true;
     enemies.forEach((enemy) => enemy.element.classList.add('not-clickable'));
@@ -276,6 +299,15 @@ function unPause() {
     gameState = GAMESTATES.RUNNING;
     answerInput.disabled = false;
     enemies.forEach((enemy) => enemy.element.classList.remove('not-clickable'));
+}
+
+function continueUnPause() {
+    engine.start();
+    pauseButton.textContent = "Pause";
+    gameState = GAMESTATES.RUNNING;
+    answerInput.disabled = false;
+    enemies.forEach((enemy) => enemy.element.classList.remove('not-clickable'));
+    hideElement(document.querySelector('#pauseMenu'));
 }
 
 /**
@@ -346,7 +378,7 @@ function handleHomeButtonClick() {
     engine.stop();
     gameState = GAMESTATES.MENU;
     //hideElement(gamePage);
-    showElement(startPage, 'flex');
+    window.location.replace("../main_menu.html");
 }
 
 /**
@@ -356,9 +388,12 @@ function init() {
     //showElement(gamePage, 'flex');
     start(selectedDifficulty);
     restartButton.addEventListener('click', restart);
+    pauseRestartButton.addEventListener('click', restart2);
     pauseButton.addEventListener('click', handlePause);
+    continueBtn.addEventListener('click', continueUnPause);
     answerForm.addEventListener('submit', handleAnswerSubmit);
     homeButton.addEventListener('click', handleHomeButtonClick);
+    
 }
 
 export default Object.freeze({

@@ -624,27 +624,134 @@ div {
 }
 
 
+/* ********  PAUSE PAGE  ******** */
+#pauseMenu {
+    height: 500px;
+    width: 50%;
+    color: #f3f2c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+#pauseMenu {
+    display:none;
+    z-index: 100;
+}
+.pauseInfo::before {
+    --offset: 67px;
+    background: none;
+    border: 30px solid #774526;
+    border-radius: var(--border-radius);
+    content: '';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--border-size) - var(--offset));
+    right: calc(var(--border-size) - var(--offset));
+    bottom: calc(var(--border-size) - var(--offset));
+    left: calc(var(--border-size) - var(--offset));
+    margin-top: 0px;
+}
+.pauseInfo {
+    --border-size: 30px;
+    --border-radius: 30px;
+    background-color: #774526;
+    width: 400px;
+    height: 800px;
+    border: var(--border-size) solid #ce7f54;
+    border-radius: var(--border-radius);
+    position: relative;
+    display: grid; /* Change from 'flex' to 'grid' */
+    grid-template-columns: 1fr; /* Add this line to create a single column grid */
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px; /* Add this line to create space between child elements */
+}
+
+#pauseMenu .title {
+    margin-bottom: 0; /* Remove the margin-bottom */
+}
+
+#pauseMenu .title-score {
+    font-size: 1.5rem;
+    margin-bottom: 0; /* Remove the margin-bottom */
+}
+
+#pauseMenu .title-question-history {
+    font-weight: bold;
+    margin-bottom: 0; /* Remove the margin-bottom */
+}
+
+#goHomeBtn {
+    background-color: #ce7f54;
+    color: white;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 8px 0px #5b321c;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px; /* Add some margin-top for separation */
+}
+#pause-restart-button {
+    background-color: #ce7f54;
+    color: white;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 8px 0px #5b321c;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px; /* Add some margin-top for separation */
+}
+#continueBtn {
+    background-color: #ce7f54;
+    color: white;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0px 8px 0px #5b321c;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px; /* Add some margin-top for separation */
+}
 
 /* ********  GAME-OVER-PAGE  ******** */
 #game-over-page {
     height: 900px;
     width: 100%;
     color: #f3f2c9;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-}
-#game-over-page {
-    display: none;
-    justify-content: center;
-    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 100;
 }
 
+#game-over-page {
+    display:none;
+    z-index: 100;
+}
+.gameover-info::before {
+    --offset: 67px;
+    background: none;
+    border: 30px solid #774526;
+    border-radius: var(--border-radius);
+    content: '';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--border-size) - var(--offset));
+    right: calc(var(--border-size) - var(--offset));
+    bottom: calc(var(--border-size) - var(--offset));
+    left: calc(var(--border-size) - var(--offset));
+    pointer-events: none;
+    margin-top: 0px;
+}
 .gameover-info {
     --border-size: 30px;
     --border-radius: 30px;
@@ -654,69 +761,53 @@ div {
     border: var(--border-size) solid #ce7f54;
     border-radius: var(--border-radius);
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid; /* Change from 'flex' to 'grid' */
+    grid-template-columns: 1fr; /* Add this line to create a single column grid */
     justify-content: center;
     align-items: center;
-}
-
-.gameover-info::before {
-    --offset: 67px;
-    background: none;
-    border: 30px solid #774526;
-    border-radius: var(--border-radius);
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: calc(var(--border-size) - var(--offset));
-    right: calc(var(--border-size) - var(--offset));
-    bottom: calc(var(--border-size) - var(--offset));
-    left: calc(var(--border-size) - var(--offset));
-    pointer-events: none;
+    padding: 30px;
+    gap: 20px; /* Add this line to create space between child elements */
 }
 
 #game-over-page .title {
-    margin-bottom: 10px;
-    color: #ce7f54;
-    text-shadow: 0px 5px 0px #5b321c;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0; /* Remove the margin-bottom */
 }
 
 #game-over-page .title-score {
-    font-size: 2rem;
-    color: #ce7f54;
-    margin-bottom: 1rem;
-    text-shadow: 0px 3px 0px #5b321c;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-}
-
-#game-over-page .score {
-    font-size: 2rem;
-    color: white;
-    text-shadow: 0px 4px 0px #5b321c;
-    margin-left: 0.1em;
+    font-size: 1.5rem;
+    margin-bottom: 0; /* Remove the margin-bottom */
 }
 
 #game-over-page .title-question-history {
-    margin-bottom: 0;
+    font-weight: bold;
+    margin-bottom: 0; /* Remove the margin-bottom */
 }
 
 #restart-button {
     background-color: #ce7f54;
     color: white;
+    height: 100px;
+    width: 200px;
     box-shadow: 0px 8px 0px #5b321c;
     border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px; /* Add some margin-top for separation */
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 /* ********  Question History Styles  ******** */
-
 #table-container {
     max-height: 300px;
     margin-top: 10px;
     overflow-y: auto;
+    display: block;
+    
 }
 
 #question-history {
