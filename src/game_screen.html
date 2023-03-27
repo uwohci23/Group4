@@ -26,95 +26,71 @@
  
      </head>
      <body>
-         <div id="content-container" >
-             <div id="_bg__game_screen"  ></div>
-             <img src="images/cloud8.png" id="cloud" />
-             <img src="images/cloud_ek81.png" id="cloud_ek1" />
-             <img src="images/cloud_ek82.png" id="cloud_ek2" />
-             <img src="images/cloud_ek83.png" id="cloud_ek3" />
-             <img src="images/cloud_ek84.png" id="cloud_ek4" />
-             <img src="images/cloud_ek85.png" id="cloud_ek5" />
-             <img src="images/cloud_ek86.png" id="cloud_ek6" />
+        <div id="_bg__game_screen"  ></div>
 
+        <img src="images/cloud8.png" id="cloud" />
+        <img src="images/cloud_ek81.png" id="cloud_ek1" />
+        <img src="images/cloud_ek82.png" id="cloud_ek2" />
+        <img src="images/cloud_ek83.png" id="cloud_ek3" />
+        <img src="images/cloud_ek84.png" id="cloud_ek4" />
+        <img src="images/cloud_ek85.png" id="cloud_ek5" />
+        <img src="images/cloud_ek86.png" id="cloud_ek6" />
+        
+        
+        <div id="content-container" >
+             <div id="menu_options"  >
+                <div id="menu_options_ek1">
 
-             <div id="menu_options"  ></div>
-             <div id="menu_options_ek1"  ></div>
-             <div id="solving_square"  ></div>
+                    <button id="pauseBtn" class="button pause-button">Pause</button>
+    
+                    <p id="castle-lives-header">
+                        Health:
+                        <span class="ui-value" id="castle-lives"></span>
+                    </p>
+                     
+                    <p id="game-score">
+                        Score:
+                        <span class="ui-value" data-score-display></span>
+                    </p>
+    
+                    <p id="game-timer"></p>
+                 </div>
 
-             <a id="_rectangle_52_link" href="info_screen.html" >
-             <div id="_rectangle_52"  ></div>
-             </a>
-             <div id="pause" >
-                 Pause
-             </div>
-             <a id="_rectangle_53_link" href="info_screen.html" >
-             <div id="_rectangle_53"  ></div>
-             </a>
-
-             <div id="menu_options_ek2"  >
-
-                <div id="game-board-container">
+                 <div id="game-board-container">
                     <div id="game-board-menu">
-                        <button class="button pause-button">Pause</button>
                         <p id="game-timer"></p>
                         
-                        <button id="home-button" class="button pause-button">
-                            Home
-                        </button>
+
                     </div>
                     <div id="game-board">
                         <div id="castle"></div>
                     </div>
                 </div>
-             </div>
 
-             <p id="castle-lives-header">
-                Health:
-                <span class="ui-value" id="castle-lives"></span>
-            </p>
-             
-            <p id="game-score">
-                Score:
-                <span class="ui-value" data-score-display></span>
-            </p>
+                <div id="solving_square_ek1"  >
+                    <div id="bottom_bar_ek1"  ></div>
+                    <div id="bottom_bar_ek2"  ></div>
+                    <div id="bottom_bar_ek3"  ></div>
+                    <div id="bottom_bar_ek4"  ></div>
 
-            
-             <div id="solving_square_ek1"  >
-                <div id="bottom_bar_ek1"  ></div>
-                <div id="bottom_bar_ek2"  ></div>
-                <div id="bottom_bar_ek3"  ></div>
-                <div id="bottom_bar_ek4"  ></div>
+                    <div id="answer-form-container">
+                        <form class="answer-form">
+                            <input
+                                type="number"
+                                max="10000"
+                                id="answer-input"
+                                autocomplete="off"
+                                placeholder="ENTER YOUR ANSWER"
+                                onfocus="this.placeholder=''"
+                                onblur="this.placeholder='ENTER YOUR ANSWER'"
+                            />
+                            </form>
+                    </div>
 
-                <div id="answer-form-container">
-                    <form class="answer-form">
-                        <input
-                          type="number"
-                          max="10000"
-                          id="answer-input"
-                          autocomplete="off"
-                          placeholder="ENTER YOUR ANSWER"
-                          onfocus="this.placeholder=''"
-                          onblur="this.placeholder='ENTER YOUR ANSWER'"
-                        />
-                      </form>
                 </div>
-                
+
             </div>
             
-
-             <a id="_rectangle_54_link" href="game_screen_paused.html" >
-             <div id="_rectangle_54"></div>
-             </a>
-             <div id="pause_ek1" >
-                 Pause
-             </div>
-             <a id="_rectangle_55_link" href="info_screen.html" >
-             <div id="_rectangle_55"></div>
-             </a>
-             <div id="time_left__04_20_ek1" >
-                <p id="game-timer"></p>
-             </div>
- 
          </div>
 
 

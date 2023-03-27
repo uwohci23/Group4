@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var gameBoardMap = document.querySelector('#game-board');
     var map = localStorage.getItem("map");
     var imagePath = "./images/" + map + ".png";
-    console.log("Setting background image to:", imagePath); // Add this line
+    //console.log("Setting background image to:", imagePath); // Add this line
     gameBoardMap.style.backgroundImage = "url('" + imagePath + "')";
 });
 

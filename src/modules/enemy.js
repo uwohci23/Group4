@@ -27,7 +27,7 @@ function Enemy({
 
     
     function handleKeyboardSelectEnemy(event, enemyElement, enemies) {
-        console.log(enemies);
+        //console.log(enemies);
         if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].includes(event.code)) {
             let currentIndex = enemies.findIndex(enemy => enemy.element === enemyElement);
             let newIndex;
