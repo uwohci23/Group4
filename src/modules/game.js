@@ -9,14 +9,13 @@ import { hideElement, showElement } from './domUtils';
 import Engine from './engine';
 import populateQuestionHistory from './questionHistory';
 
-import mapImage from '../img/map1.png';
-import mapImage2 from '../img/map2.png';
 const GAMESTATES = {
     MENU: 0,
     RUNNING: 1,
     GAMEOVER: 2,
     PAUSED: 3,
 };
+let selectedEnemyIndex = -1;
 
 document.addEventListener("DOMContentLoaded", function () {
     var gameBoardMap = document.querySelector('#game-board');
@@ -62,6 +61,7 @@ function spawnEnemy() {
         handleSelectEnemy,
         damageCastle,
         deleteEnemy,
+        enemies,
     });
     settings.enemySpeed += settings.enemySpeedIncrement;
     gameBoard.element.appendChild(enemy.element);
@@ -119,6 +119,13 @@ function handleAnswerSubmit(event) {
     if (enemyEvent.answer.value === correctAnswer) {
         enemyEvent.answer.isCorrect = true;
         selectedEnemy.handleDelete();
+        deleteEnemy(selectedEnemy.element); // Remove the enemy from the enemies array
+
+        // Update the enemies list in every remaining enemy
+        enemies.forEach(enemy => {
+            enemy.updateEnemiesList(enemies);
+        });
+
         selectedEnemy = null;
         scoreHandler.addPoints(settings.POINTS.CORRECT_ANSWER);
     } else {
@@ -129,20 +136,42 @@ function handleAnswerSubmit(event) {
     answerInput.value = '';
 }
 
-function handleSelectEnemy(event) {
+
+
+function handleSelectEnemy(event, enemyElement) {
     answerInput.focus();
 
-    const clickedEnemy = enemies.find(
-        (enemy) => enemy.element === event.currentTarget
+    if (event) {
+        event.stopPropagation();
+    }
+
+    const clickedEnemyElement = enemyElement;
+    const clickedEnemyIndex = enemies.findIndex(
+        (enemy) => enemy.element === clickedEnemyElement
     );
 
-    if (clickedEnemy === selectedEnemy) return;
+    if (clickedEnemyIndex !== -1 && enemies[clickedEnemyIndex] === selectedEnemy) return;
 
-    if (selectedEnemy) selectedEnemy.toggleSelect();
+    if (selectedEnemy) {
+        selectedEnemy.toggleSelect();
+        const arrowToRemove = selectedEnemy.element.querySelector('#arrow');
+        if (arrowToRemove) {
+            arrowToRemove.remove();
+        }
+    }
 
-    clickedEnemy.toggleSelect();
+    const clickedEnemy = enemies[clickedEnemyIndex];
+    if (clickedEnemy) { // Check if clickedEnemy is not undefined
+        clickedEnemy.toggleSelect();
 
-    selectedEnemy = clickedEnemy;
+        const arrow = document.querySelector('#arrow');
+        const arrowClone = arrow.cloneNode(true);
+        arrowClone.removeAttribute('style');
+        arrowClone.setAttribute('id', 'arrow');
+        clickedEnemy.element.appendChild(arrowClone);
+
+        selectedEnemy = clickedEnemy;
+    }
 }
 
 function damageCastle(amount) {

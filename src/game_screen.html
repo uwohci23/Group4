@@ -16,74 +16,71 @@
             src="https://kit.fontawesome.com/4323c15833.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="StyleSheet" href="./styles/game_screen.css" />
-        <script
-            src="https://kit.fontawesome.com/4323c15833.js"
-            crossorigin="anonymous"
-        ></script>
         <title>Math Castlè</title>
     </head>
     <body>
-
-
-            <div id="game-page">
-                <div id="game-board-container">
-                    <div id="game-board-menu">
-                        <button class="button pause-button">Pause</button>
-                        <p id="game-score">
-                            Score:
-                            <span class="ui-value" data-score-display></span>
-                        </p>
-                        <p id="game-timer"></p>
-                        <p id="castle-lives-header">
-                            Health:
-                            <span class="ui-value" id="castle-lives"></span>
-                        </p>
-                        <button id="home-button" class="button pause-button">
-                            Home
-                        </button>
-                    </div>
-                    <div id="game-board">
-                        <div id="castle"></div>
-                    </div>
-                    <div id="answer-form-container">
-                        <form class="answer-form">
-                            <input
-                                type="number"
-                                max="10000"
-                                id="answer-input"
-                                autocomplete="off"
-                                placeholder="ENTER YOUR ANSWER"
-                            />
-                        </form>
-                    </div>
+        <div id="game-page">
+            <div id="game-board-container">
+                <div id="game-board-menu">
+                    <button class="button pause-button">Pause</button>
+                    <p id="game-score">
+                        Score:
+                        <span class="ui-value" data-score-display></span>
+                    </p>
+                    <p id="game-timer"></p>
+                    <p id="castle-lives-header">
+                        Health:
+                        <span class="ui-value" id="castle-lives"></span>
+                    </p>
+                    <button id="home-button" class="button pause-button">
+                        Home
+                    </button>
                 </div>
-            </div>
-
-            <div id="game-over-page">
-                <div class="gameover-info">
-                    <h1 id="game-over-title" class="title">Game Over</h1>
-                    <h2 class="title-score">
-                        Score: <span data-score-display class="score">10</span>
-                    </h2>
-                    <h2 class="title-score title-question-history">
-                        Question History
-                    </h2>
-
-                    <div id="table-container">
-                        <table id="question-history">
-                            <thead>
-                                <tr>
-                                    <th>Questions</th>
-                                    <th>Your Answers</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                    <button id="restart-button" class="button">Restart</button>
+                <div id="game-board">
+                    <div id="castle"></div>
+                </div>
+                <div id="answer-form-container">
+                    <form class="answer-form">
+                        <input
+                            type="number"
+                            max="10000"
+                            id="answer-input"
+                            autocomplete="off"
+                            placeholder="ENTER YOUR ANSWER"
+                        />
+                    </form>
                 </div>
             </div>
         </div>
+
+        <div id="game-over-page">
+            <div class="gameover-info">
+                <h1 id="game-over-title" class="title">Game Over</h1>
+                <h2 class="title-score">
+                    Score: <span data-score-display class="score">10</span>
+                </h2>
+                <h2 class="title-score title-question-history">
+                    Question History
+                </h2>
+
+                <div id="table-container">
+                    <table id="question-history">
+                        <thead>
+                            <tr>
+                                <th>Questions</th>
+                                <th>Your Answers</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <button id="restart-button" class="button">Restart</button>
+            </div>
+        </div>
+        <div id="arrow" style="display:none;">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+
     </body>
 </html>
