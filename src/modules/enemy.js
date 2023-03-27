@@ -5,7 +5,7 @@ const ENEMY_EVENT_TYPES = Object.freeze({
     QUESTION_ANSWERED: 1,
 });
 
-let selectedEnemyIndex = 0;
+let selectedEnemyIndex = -1;
 
 function Enemy({
     position: { x, y },

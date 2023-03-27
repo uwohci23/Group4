@@ -17,6 +17,7 @@ const GAMESTATES = {
 };
 let selectedEnemyIndex = -1;
 
+/* Setting the background image of the game board to the map that the user selected. */
 document.addEventListener("DOMContentLoaded", function () {
     var gameBoardMap = document.querySelector('#game-board');
     var map = localStorage.getItem("map");
@@ -52,6 +53,9 @@ let questionHistory = [];
 
 // PRIVATE FUNCTIONS
 
+/**
+ * It creates an enemy, adds it to the game board, and adds it to the enemies array
+ */
 function spawnEnemy() {
     const enemy = Enemy({
         position: getRandomSpawnPoint(),
@@ -68,12 +72,21 @@ function spawnEnemy() {
     enemies.push(enemy);
 }
 
+/**
+ * It returns a random spawn point from the `settings.SPAWN_POINTS` object
+ * @returns a random spawn point from the SPAWN_POINTS object.
+ */
 function getRandomSpawnPoint() {
     // randomly choose an object keys in the POSITION object
     const keys = Object.keys(settings.SPAWN_POINTS);
     return settings.SPAWN_POINTS[keys[Math.floor(Math.random() * keys.length)]];
 }
 
+/**
+ * It removes the enemy from the enemies array, and if it was the selected enemy, it sets the selected
+ * enemy to null
+ * @param element - The element that the enemy is in.
+ */
 function deleteEnemy(element) {
     enemies = enemies.filter((enemy) => {
         if (enemy.element !== element) return true;
@@ -88,10 +101,16 @@ function deleteEnemy(element) {
     });
 }
 
+/**
+ * If the player wins, call the gameOver function and pass it the string 'You Win!'
+ */
 function handleWin() {
     gameOver('You Win!');
 }
 
+/**
+ * It creates two timers, one for spawning enemies and one for ending the game
+ */
 function initialiseTimers() {
     // spawn enemy every 2.5 seconds
     timers.spawnTimer = Timer(settings.spawnTimerMs, spawnEnemy);
@@ -102,6 +121,10 @@ function initialiseTimers() {
     });
 }
 
+/**
+ * It handles the answer submission by the user
+ * @param event - The event object that is passed to the event handler.
+ */
 function handleAnswerSubmit(event) {
     event.preventDefault();
 
@@ -138,6 +161,12 @@ function handleAnswerSubmit(event) {
 
 
 
+/**
+ * If the user clicks on an enemy, select it
+ * @param event - The event object that was triggered by the click.
+ * @param enemyElement - The enemy element that was clicked.
+ * @returns the value of the variable selectedEnemy.
+ */
 function handleSelectEnemy(event, enemyElement) {
     answerInput.focus();
 
@@ -174,11 +203,19 @@ function handleSelectEnemy(event, enemyElement) {
     }
 }
 
+/**
+ * This function adds points to the score and damages the castle.
+ * @param amount - The amount of damage to be done to the castle.
+ */
 function damageCastle(amount) {
     scoreHandler.addPoints(settings.POINTS.CASTLE_LIFE_LOST);
     castle.damage(amount, gameOver);
 }
 
+/**
+ * It sets the game state to GAMEOVER, populates the question history, and shows the game over page
+ * @param titleText - The text to display in the game over title.
+ */
 function gameOver(titleText) {
     gameState = GAMESTATES.GAMEOVER;
     populateQuestionHistory(questionHistory, settings.lastAnswersToShow);
@@ -187,6 +224,9 @@ function gameOver(titleText) {
     showElement(gameOverPage, 'flex');
 }
 
+/**
+ * It resets the game
+ */
 function reset() {
     settings.enemySpeed = DEFAULT_SETTINGS.enemySpeed;
     initialiseTimers();
@@ -197,6 +237,10 @@ function reset() {
     questionHistory = [];
 }
 
+/**
+ * It resets the game, sets the difficulty, sets the game state to running, and starts the engine
+ * @param selectedDifficulty - The difficulty of the questions to be asked.
+ */
 function start(selectedDifficulty) {
     reset();
     settings.questionDifficulty = selectedDifficulty;
@@ -204,6 +248,9 @@ function start(selectedDifficulty) {
     engine.start();
 }
 
+/**
+ * Restart() hides the game over page and shows the game page, and then sets the game state to running
+ */
 function restart() {
     reset();
     hideElement(gameOverPage);
@@ -211,18 +258,31 @@ function restart() {
     gameState = GAMESTATES.RUNNING;
 }
 
+/**
+ * It sets the game state to paused, disables the answer input, and adds the class 'not-clickable' to
+ * all enemies
+ */
 function pause() {
     gameState = GAMESTATES.PAUSED;
     answerInput.disabled = true;
     enemies.forEach((enemy) => enemy.element.classList.add('not-clickable'));
 }
 
+/**
+ * It sets the game state to running, enables the answer input, and removes the not-clickable class
+ * from all enemies
+ */
 function unPause() {
     gameState = GAMESTATES.RUNNING;
     answerInput.disabled = false;
     enemies.forEach((enemy) => enemy.element.classList.remove('not-clickable'));
 }
 
+/**
+ * If the game is running, update all the timers and enemies
+ * @param deltaTime - The time in milliseconds since the last update.
+ * @returns The function update is being returned.
+ */
 function update(deltaTime) {
     if (gameState !== GAMESTATES.RUNNING) return;
 
@@ -231,12 +291,19 @@ function update(deltaTime) {
     enemies.forEach((enemy) => enemy.update(deltaTime));
 }
 
+/**
+ * Draw the game timer and draw each enemy.
+ */
 function draw() {
     gameTimer.textContent = timers.gameTimer.getHumanTimeRemaining();
 
     enemies.forEach((enemy) => enemy.draw());
 }
 
+/**
+ * If the game is running, pause it, and change the text of the pause button to "Continue". If the game
+ * is paused, unpause it, and change the text of the pause button to "Pause".
+ */
 function handlePause() {
     const pauseButtonText = ['Continue', 'Pause'];
     const [first, second] = pauseButtonText;
@@ -251,11 +318,19 @@ function handlePause() {
     }
 }
 
+/**
+ * When the start button is clicked, hide the start page and show the difficulty select page.
+ */
 function handleStartButtonClick() {
     hideElement(startPage);
     showElement(difficultySelectPage, 'flex');
 }
 
+/**
+ * When the user clicks on a difficulty button, hide the difficulty select page and show the game page,
+ * then start the game with the selected difficulty
+ * @param event - The event object that was triggered.
+ */
 function handleDifficultySelect(event) {
     const selectedDifficulty = event.target.dataset.difficulty;
     hideElement(difficultySelectPage);
@@ -263,6 +338,9 @@ function handleDifficultySelect(event) {
     start(selectedDifficulty);
 }
 
+/**
+ * It stops the game, sets the game state to the menu, and shows the start page
+ */
 function handleHomeButtonClick() {
     if (gameState === GAMESTATES.PAUSED) handlePause();
     engine.stop();
@@ -271,8 +349,9 @@ function handleHomeButtonClick() {
     showElement(startPage, 'flex');
 }
 
-// PUBLIC FUNCTIONS
-
+/**
+ * It adds event listeners to the buttons and form, and starts the game
+ */
 function init() {
     //showElement(gamePage, 'flex');
     start(selectedDifficulty);
