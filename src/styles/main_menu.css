@@ -54,7 +54,8 @@ div { position: absolute; }
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
-	background:rgba(148,92,63,1);
+	background: url("../images/user_pic.jpg") center no-repeat;
+	background-size: 100% 100%;
 }
 
 

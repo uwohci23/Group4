@@ -23,7 +23,40 @@
 		<link rel="StyleSheet" href="./styles/profile_screen.css" />
 		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 		<!-- Add your custom HEAD content here -->
-
+		<script>
+			window.onload = function() {
+			var data = {
+				"title": "56xp left ",
+				"skills": [
+					"1",
+					"2",
+					"3",
+					"4",
+				],
+				"stats": [
+					"highest score: 50",
+					"number of win: 20",
+					"number of lose: 10",
+				],
+			}
+			document.getElementById('_100_xp_left').innerText = data.title;
+			
+			data.skills.forEach(item =>{
+				let temp = document.createElement("div");
+				temp.id = "skill_item";
+				temp.innerText = item;
+				document.getElementById('skill_list').appendChild(temp);
+			});	
+			data.stats.forEach(item =>{
+				let temp = document.createElement("div");
+				temp.id = "stats_item";
+				let text = document.createElement("span");
+				text.innerText = item;
+				temp.appendChild(text);
+				document.getElementById('stats_list').appendChild(temp);
+			});
+		};
+		</script>
 	</head>
 	<body>
 		<div id="content-container" >
@@ -34,24 +67,25 @@
 			<img src="images/rectangle_26.png" id="rectangle_2" />
 			<div id="rectangle_6"  ></div>
 			<div id="rectangle_5"  ></div>
-			<div id="rectangle_7"  ></div>
-			<div id="rectangle_8"  ></div>
-			<div id="rectangle_39"  ></div>
+			<div id="left"  >
+				<div id="title">Skills</div>
+				<div id="skill_list">
+				</div>
+			</div>
+			<div id="right">
+				<div id="stats">Statistics</div>
+				<div id="stats_list">
+				</div>
+			</div>
 			<a id="_rectangle_30_link" href="main_menu.html" >
 			<div id="_rectangle_30"  ></div>
+				<div id="back" >
+					Back
+				</div>
 			</a>
-			<div id="back" >
-				Back
-			</div>
-			<div id="rectangle_34"  ></div>
-			<div id="skills" >
-				Skills
-			</div>
+			
 			<div id="user_4474" >
 				User 4474
-			</div>
-			<div id="stats" >
-				Stats
 			</div>
 			<div id="rectangle_35"  ></div>
 			<div id="rectangle_38"  ></div>
@@ -69,5 +103,6 @@
 			</div>
 
 		</div>
+
 	</body>
 </html>

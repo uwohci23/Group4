@@ -78,11 +78,12 @@ div { position: absolute; }
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
-	background:rgba(148,92,63,1);
+	background: url("../images/user_pic.jpg") center no-repeat;
+	background-size: 100% 100%;
 }
 
 
-#rectangle_7 {
+#left {
 	top: 361px;
 	left: 101px;
 	width: 260px;
@@ -95,8 +96,47 @@ div { position: absolute; }
 	background:rgba(157.25,122.15,102.21,1);
 }
 
+#left #title{
+	width: 260px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	overflow: auto;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
 
-#rectangle_8 {
+#skill_list{
+	width: 100%;
+	margin-top: 80px;
+	list-style: none;
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+#skill_item{
+	width: 100%;
+	position: relative;
+	background: rgba(10,10,10,.2);	
+	border-radius: 5px;
+	text-align: center;
+}
+
+#skill_item span{
+	/* margin-inline-start	: 12px; */
+}
+
+#right {
 	top: 361px;
 	left: 392px;
 	width: 1455px;
@@ -109,12 +149,16 @@ div { position: absolute; }
 	background:rgba(157.25,122.15,102.21,1);
 }
 
-
-#rectangle_39 {
-	top: 361px;
-	left: 392px;
+#right #stats{
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
 	width: 1455px;
 	height: 75px;
+	line-height: 75px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	-moz-border-radius: 25px;
@@ -123,7 +167,26 @@ div { position: absolute; }
 	background:rgba(109,65,40,1);
 }
 
+#stats_list{
+	width: 100%;
+	margin-top: 80px;
+	list-style: none;
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
 
+#stats_item{
+	width: 100%;
+	position: relative;
+	background: rgba(10,10,10,.2);	
+	border-radius: 5px;
+}
+
+#stats_item span{
+	margin-inline-start	: 12px;
+}
 #_rectangle_30 {
 	top: 890px;
 	left: 1422px;
@@ -151,21 +214,6 @@ div { position: absolute; }
 	color:#FFFFFF;
 }
 
-
-#rectangle_34 {
-	top: 361px;
-	left: 101px;
-	width: 260px;
-	height: 75px;
-	-ms-border-radius: 25px;
-	-o-border-radius: 25px;
-	-moz-border-radius: 25px;
-	-webkit-border-radius: 25px;
-	border-radius: 25px;
-	background:rgba(109,65,40,1);
-}
-
-
 #skills {
 	top: 368px;
 	left: 167px;
@@ -192,21 +240,6 @@ div { position: absolute; }
 	text-align: left;
 	color:#FFFFFF;
 }
-
-
-#stats {
-	top: 368px;
-	left: 1055px;
-	width: 182px;
-	height: 96px;
-	overflow: hidden;
-	font-family: Inter;
-	font-size: 50px;
-	font-weight: bold;
-	text-align: left;
-	color:#FFFFFF;
-}
-
 
 #rectangle_35 {
 	top: 206px;
@@ -318,7 +351,3 @@ div { position: absolute; }
 	text-align: left;
 	color:#000000;
 }
-
-
-
-/* Add your custom CSS here */
