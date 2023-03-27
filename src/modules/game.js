@@ -299,6 +299,7 @@ function unPause() {
     gameState = GAMESTATES.RUNNING;
     answerInput.disabled = false;
     enemies.forEach((enemy) => enemy.element.classList.remove('not-clickable'));
+    hideElement(document.querySelector('#pauseMenu'));
 }
 
 function continueUnPause() {
