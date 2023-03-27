@@ -1,59 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- FONT LINK -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Luckiest+Guy&family=Merriweather&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="StyleSheet" href="./styles/game_screen.css" />
-        <script
-            src="https://kit.fontawesome.com/4323c15833.js"
-            crossorigin="anonymous"
-        ></script>
-        <title>Math Castlè</title>
-    </head>
-    <body>
-        <div id="game-page">
-            <div id="game-board-container">
-                <div id="game-board-menu">
-                    <button class="button pause-button">Pause</button>
-                    <p id="game-score">
-                        Score:
-                        <span class="ui-value" data-score-display></span>
-                    </p>
-                    <p id="game-timer"></p>
-                    <p id="castle-lives-header">
-                        Health:
-                        <span class="ui-value" id="castle-lives"></span>
-                    </p>
-                    <button id="home-button" class="button pause-button">
-                        Home
-                    </button>
+<!-- 
+/*
+ *	This content is generated from the PSD File Info.
+ *	(Alt+Shift+Ctrl+I).
+ *
+ *	@desc 		
+ *	@file 		game_screen
+ *	@date 		Wednesday 22nd of March 2023 12:25:28 AM
+ *	@title 		Page 1
+ *	@author 	
+ *	@keywords 	
+ *	@generator 	Export Kit v1.3.figma
+ *
+*/
+ -->
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+     <head>
+         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+         <title>game_screen</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="" >
+         <link rel="StyleSheet" href="./styles/game_screen.css" />
+         <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+         <!-- Add your custom HEAD content here -->
+ 
+     </head>
+     <body>
+         <div id="content-container" >
+             <div id="_bg__game_screen"  ></div>
+             <img src="images/cloud8.png" id="cloud" />
+             <img src="images/cloud_ek81.png" id="cloud_ek1" />
+             <img src="images/cloud_ek82.png" id="cloud_ek2" />
+             <img src="images/cloud_ek83.png" id="cloud_ek3" />
+             <img src="images/cloud_ek84.png" id="cloud_ek4" />
+             <img src="images/cloud_ek85.png" id="cloud_ek5" />
+             <img src="images/cloud_ek86.png" id="cloud_ek6" />
+
+
+             <div id="menu_options"  ></div>
+             <div id="menu_options_ek1"  ></div>
+             <div id="solving_square"  ></div>
+
+             <a id="_rectangle_52_link" href="info_screen.html" >
+             <div id="_rectangle_52"  ></div>
+             </a>
+             <div id="pause" >
+                 Pause
+             </div>
+             <a id="_rectangle_53_link" href="info_screen.html" >
+             <div id="_rectangle_53"  ></div>
+             </a>
+
+             <div id="menu_options_ek2"  >
+
+                <div id="game-board-container">
+                    <div id="game-board-menu">
+                        <button class="button pause-button">Pause</button>
+                        <p id="game-timer"></p>
+                        
+                        <button id="home-button" class="button pause-button">
+                            Home
+                        </button>
+                    </div>
+                    <div id="game-board">
+                        <div id="castle"></div>
+                    </div>
                 </div>
-                <div id="game-board">
-                    <div id="castle"></div>
-                </div>
+             </div>
+
+             <p id="castle-lives-header">
+                Health:
+                <span class="ui-value" id="castle-lives"></span>
+            </p>
+             
+            <p id="game-score">
+                Score:
+                <span class="ui-value" data-score-display></span>
+            </p>
+
+            
+             <div id="solving_square_ek1"  >
+                <div id="bottom_bar_ek1"  ></div>
+                <div id="bottom_bar_ek2"  ></div>
+                <div id="bottom_bar_ek3"  ></div>
+                <div id="bottom_bar_ek4"  ></div>
+
                 <div id="answer-form-container">
                     <form class="answer-form">
                         <input
-                            type="number"
-                            max="10000"
-                            id="answer-input"
-                            autocomplete="off"
-                            placeholder="ENTER YOUR ANSWER"
+                          type="number"
+                          max="10000"
+                          id="answer-input"
+                          autocomplete="off"
+                          placeholder="ENTER YOUR ANSWER"
+                          onfocus="this.placeholder=''"
+                          onblur="this.placeholder='ENTER YOUR ANSWER'"
                         />
-                    </form>
+                      </form>
                 </div>
+                
             </div>
-        </div>
+            
 
-        <div id="game-over-page">
+             <a id="_rectangle_54_link" href="game_screen_paused.html" >
+             <div id="_rectangle_54"></div>
+             </a>
+             <div id="pause_ek1" >
+                 Pause
+             </div>
+             <a id="_rectangle_55_link" href="info_screen.html" >
+             <div id="_rectangle_55"></div>
+             </a>
+             <div id="time_left__04_20_ek1" >
+                <p id="game-timer"></p>
+             </div>
+ 
+         </div>
+
+
+         <div id="game-over-page">
             <div class="gameover-info">
                 <h1 id="game-over-title" class="title">Game Over</h1>
                 <h2 class="title-score">
@@ -77,10 +142,10 @@
                 <button id="restart-button" class="button">Restart</button>
             </div>
         </div>
+
+
         <div id="arrow" style="display:none;">
             <i class="fas fa-arrow-up"></i>
         </div>
-
-
-    </body>
-</html>
+     </body>
+ </html>
