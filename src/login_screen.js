@@ -17,4 +17,20 @@ fetch('users.json')
                 alert('Inavlid username or password');
             }
         });
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const loginLink = document.getElementById('login');
+        const signupLink = document.getElementById('signup');
+
+        signupLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+        });
+        loginLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            signupForm.style.display = "none";
+            loginForm.style.display = "block";
+        });
     });
+
