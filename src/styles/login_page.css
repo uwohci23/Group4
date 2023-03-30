@@ -1,0 +1,84 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Arial";
+    overflow-x: hidden;
+}
+img {
+    position: absolute;
+    display: block;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+div {
+    position: absolute;
+}
+#login-menu {
+    left: 700px;
+    top: 300px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgba(109, 65, 40, 1);
+}
+#login-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+.login-btn {
+    width: 20px;
+    background-color: white;
+}
+#_bg__starting_page {
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+    background: rgba(22, 182, 218, 1);
+}
+#cloud {
+    top: 80px;
+    left: 820px;
+    width: 712px;
+    height: 434px;
+}
+
+
+#cloud_ek1 {
+    top: 109px;
+    left: 220px;
+    width: 261px;
+    height: 163px;
+}
+
+
+#cloud_ek2 {
+    top: 244px;
+    left: 1231px;
+    width: 507px;
+    height: 328px;
+}
+
+
+#cloud_ek3 {
+    top: 572px;
+    left: 410px;
+    width: 261px;
+    height: 163px;
+}
+
+
+#cloud_ek4 {
+    top: 816px;
+    left: 76px;
+    width: 261px;
+    height: 163px;
+}
+#cloud_ek5 {
+    top: 666px;
+    left: 1573px;
+    width: 261px;
+    height: 163px;
+}
