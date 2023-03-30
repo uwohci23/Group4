@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <link rel="StyleSheet" href="./styles/login_page.css" />
         <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+        <script src="./login_screen.js"></script>
 
     </head>
     <body>
@@ -22,14 +23,15 @@
                 <form id="login-form">
                     <div id="login-item">
                         <label id="name">Name</label>
-                        <input id="input" type="text" name="user_name">
+                        <input id="input-user" type="text" name="user_name">
                     </div>
                     <div id="login-item">
                         <label id="password">Password</label>
-                        <input id="input" type="password" name="password">
+                        <input id="input-password" type="password" name="password">
                     </div>
                     <div class="parent-btn">
-                        <a class="login-btn" href="./main_menu.html">Login</a>
+                        <button id="login-btn" type="submit">Login</button>
+                        <!-- <a class="login-btn" href="./main_menu.html">Login</a> -->
                     </div>
                     
                     
