@@ -32,19 +32,22 @@ h1 {
     margin-bottom: 60px;
 }
 .parent-btn {
-    left: 200px;
+    left: 180px;
     bottom: 90px;
 }
 #login-btn {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    width: 90px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 150px;
     background-color: white;
     color: rgba(109, 65, 40, 1);
     font-weight: bold;
     border-radius: 4px;
     padding: 8px 20px;
+    border: none;
 }
 label {
     color: white;
@@ -69,6 +72,14 @@ label {
     height: 30px;
     width: 200px;
     font-size: 20px;
+}
+#signup-link {
+    bottom: 40px;
+    left: 150px;
+    color: white;
+}
+#signup-link a {
+    color: rgba(22, 182, 218, 1);
 }
 #_bg__starting_page {
     opacity: 0.9;
