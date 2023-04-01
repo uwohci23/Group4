@@ -803,7 +803,7 @@ h2 {
 
 /* ********  Question History Styles  ******** */
 #table-container {
-    max-height: 300px;
+    max-height: 200px;
     margin-top: 10px;
     overflow-y: auto;
     display: block;
