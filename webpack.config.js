@@ -13,6 +13,7 @@ module.exports = {
         inital_game_options_screen: path.resolve(__dirname, './src/inital_game_options_screen.html'), // Add settings_screen.html to the entry
         loss_victory_screen: path.resolve(__dirname, './src/loss_victory_screen.html'), // Add settings_screen.html to the entry
         game_screen: path.resolve(__dirname, './src/game_screen.js'), // Add settings_screen.html to the entry
+        login_screen: path.resolve(__dirname, './src/login_screen.js'), // Add settings_screen.html to the entry
     },
 
     module: {
@@ -86,6 +87,11 @@ module.exports = {
             filename: 'game_screen.html', // Set the filename of the new HtmlWebpackPlugin
             template: path.resolve(__dirname, './src/game_screen.html'),
             chunks: ['game_screen'] // Specify the chunks to include in the main_menu.html file
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login_screen.html', // Set the filename of the new HtmlWebpackPlugin
+            template: path.resolve(__dirname, './src/login_screen.html'),
+            chunks: ['login_screen'] // Specify the chunks to include in the main_menu.html file
         }),
         
         new MiniCssExtractPlugin({

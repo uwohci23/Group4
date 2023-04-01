@@ -1,4 +1,4 @@
-
+import './styles/login_page.css';
 fetch('users.json')
     .then(response => response.json())
     .then(users => {
