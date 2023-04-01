@@ -5,7 +5,7 @@
     "main": "index.js",
     "private": true,
     "scripts": {
-        "start": "webpack serve --open --mode=development --port 500",
+        "start": "webpack serve --open --mode=development --port 5000",
         "build": "webpack --mode=production",
         "deploy": "npm run build && gh-pages -d dist",
         "lint": "eslint .",
