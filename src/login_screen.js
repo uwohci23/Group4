@@ -1,36 +1,35 @@
-import './styles/login_page.css';
-fetch('users.json')
-    .then(response => response.json())
-    .then(users => {
-        document.getElementById('login-form').addEventListener('submit', event => {
-            event.preventDefault();
+import './styles/login_screen.css';
+import users from './users.json';
 
-            const user_name = document.getElementById('input-user').value;
-            const password = document.getElementById('input-password').value;
+document.getElementById('login-form').addEventListener('submit', event => {
+  event.preventDefault();
 
-            const user = users.find(user => user.user_name === user_name && user.password === password);
+  const user_name = document.getElementById('input-user').value;
+  const password = document.getElementById('input-password').value;
 
-            if (user) {
-                alert('Login Successful!')
-                window.location.href = 'main_menu.html';
-            } else {
-                alert('Inavlid username or password');
-            }
-        });
-        const loginForm = document.getElementById('login-form');
-        const signupForm = document.getElementById('signup-form');
-        const loginLink = document.getElementById('login');
-        const signupLink = document.getElementById('signup');
+  const user = users.find(user => user.user_name === user_name && user.password === password);
 
-        signupLink.addEventListener("click", function (e) {
-            e.preventDefault();
-            loginForm.style.display = "none";
-            signupForm.style.display = "block";
-        });
-        loginLink.addEventListener("click", function (e) {
-            e.preventDefault();
-            signupForm.style.display = "none";
-            loginForm.style.display = "block";
-        });
-    });
+  if (user) {
+    //alert('Login Successful!');
+    window.location.replace("./main_menu.html");
+  } else {
+    alert('Inavlid username or password');
+  }
+});
 
+const loginForm = document.getElementById('login-form');
+const signupForm = document.getElementById('signup-form');
+const loginLink = document.getElementById('login');
+const signupLink = document.getElementById('signup');
+
+signupLink.addEventListener("click", function (e) {
+  e.preventDefault();
+  loginForm.style.display = "none";
+  signupForm.style.display = "block";
+});
+
+loginLink.addEventListener("click", function (e) {
+  e.preventDefault();
+  signupForm.style.display = "none";
+  loginForm.style.display = "block";
+});
