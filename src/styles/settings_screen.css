@@ -94,7 +94,9 @@ div { position: absolute; }
 	border-radius: 25px;
 	background:rgba(109,65,40,1);
 }
-
+#back:hover {
+	transform: scale(0.9);
+}
 
 #back {
 	top: 851px;
@@ -107,6 +109,7 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: left;
 	color:#FFFFFF;
+	transition: transform 0.5s;
 }
 
 

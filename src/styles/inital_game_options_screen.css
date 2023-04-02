@@ -371,6 +371,10 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+#start_:hover {
+	transform: scale(0.9);
 }
 
 
@@ -399,6 +403,10 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+#back:hover {
+	transform: scale(0.9);
 }
 
 #map_5 {

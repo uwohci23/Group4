@@ -88,6 +88,9 @@ div { position: absolute; }
 	background:rgba(109,65,40,1);
 }
 
+#continue:hover {
+	transform: scale(0.9);
+}
 
 #continue {
 	top: 902px;
@@ -100,6 +103,7 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
+	transition: transform 0.5s;
 }
 
 
@@ -128,6 +132,10 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+#back:hover {
+	transform: scale(0.9);
 }
 
 

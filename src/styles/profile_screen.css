@@ -200,6 +200,9 @@ div { position: absolute; }
 	background:rgba(109,65,40,1);
 }
 
+#back:hover {
+	transform: scale(0.9);
+}
 
 #back {
 	top: 917px;
@@ -212,6 +215,7 @@ div { position: absolute; }
 	font-weight: bold;
 	text-align: center;
 	color:#FFFFFF;
+	transition: transform 0.5s;
 }
 
 #skills {
