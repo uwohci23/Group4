@@ -1,0 +1,11 @@
+- make sure that data for the user is consistent across the screens using local.store
+- adjust the status screen so that it works
+- implement abilities for the game
+- add HCI elements so that there is action reaction feed back
+- fix the WASD as its not always working
+- add and arrow to indicate which element is clicked on/ is currently attacking
+- adjust the skills tree screen
+-- user should be able to perchase stuff
+-- Save the user's information on purchase etc
+-- decrease and increase the user's score accordingly
+- write up the documentation for the report
