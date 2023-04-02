@@ -6,11 +6,12 @@ document.getElementById('login-form').addEventListener('submit', event => {
 
   const user_name = document.getElementById('input-user').value;
   const password = document.getElementById('input-password').value;
-
+  
   const user = users.find(user => user.user_name === user_name && user.password === password);
 
-  if (user) {
-    //alert('Login Successful!');
+    if (user) {
+    localStorage.setItem('username', user_name);
+    localStorage.setItem('password', password);
     window.location.replace("./main_menu.html");
   } else {
     alert('Inavlid username or password');
@@ -22,21 +23,13 @@ document.getElementById('signup-form').addEventListener('submit', event => {
     const user_name = document.getElementById('input-user').value;
     const password = document.getElementById('input-password').value;
 
-    const newUser = {
-        user_name: user_name,
-        password: password
-    }
-    users.push(newUser);
-    const data = JSON.stringify(users);
-    const fs = require('fs');
-    fs.writeFile('./users.json', data, err => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        console.log('users file updated');
-    });
-    window.location.replace("./main_menu.html");
+    // const newUser = {
+    //     user_name: user_name,
+    //     password: password
+    // }
+    // const data = JSON.stringify(newUser);
+    
+    // window.location.replace("./main_menu.html");
     event.target.reset();
 });
 
