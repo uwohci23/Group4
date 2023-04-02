@@ -1,3 +1,4 @@
+- add in options to make sure that the user leaves
 - make sure that data for the user is consistent across the screens using local.store
 - adjust the status screen so that it works
 - implement abilities for the game
