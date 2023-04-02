@@ -95,6 +95,11 @@ div { position: absolute; }
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #000000;
 	color:#FFFFFF;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+#click_to_start:hover {
+	transform: scale(0.9);
 }
 
 
