@@ -88,6 +88,18 @@ label {
     width: 200px;
     font-size: 20px;
 }
+#signup-input-user {
+    color: rgba(109, 65, 40, 1);
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
+#signup-input-password {
+    color: rgba(109, 65, 40, 1);
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
 #signup-link {
     bottom: 40px;
     left: 150px;

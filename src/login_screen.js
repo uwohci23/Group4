@@ -1,35 +1,49 @@
 import './styles/login_screen.css';
-import users from './users.json';
+// import users from './users.json';
 
 document.getElementById('login-form').addEventListener('submit', event => {
-  event.preventDefault();
-
-  const user_name = document.getElementById('input-user').value;
-  const password = document.getElementById('input-password').value;
-  
-  const user = users.find(user => user.user_name === user_name && user.password === password);
-
-    if (user) {
-    localStorage.setItem('username', user_name);
-    localStorage.setItem('password', password);
-    window.location.replace("./main_menu.html");
-  } else {
-    alert('Inavlid username or password');
-  }
-});
-document.getElementById('signup-form').addEventListener('submit', event => {
     event.preventDefault();
 
     const user_name = document.getElementById('input-user').value;
     const password = document.getElementById('input-password').value;
 
-    // const newUser = {
-    //     user_name: user_name,
-    //     password: password
-    // }
-    // const data = JSON.stringify(newUser);
-    
-    // window.location.replace("./main_menu.html");
+    if (!user_name || !password) {
+        alert("Please enter a username and password");
+    }
+    else {
+        const userStr = localStorage.getItem("user");
+        if (userStr) {
+            const user = JSON.parse(userStr);
+            if (user_name === user.user_name && password === user.password) {
+                localStorage.setItem("signup-flag", "false");
+                localStorage.setItem("user", JSON.stringify(user));
+                console.log(user.user_name);
+                window.location.replace("./main_menu.html");
+            }
+            else {
+                alert("Invalid username or password");
+            }
+        } else {
+            alert("User not found, please signup");
+        }
+    } 
+    event.target.reset();
+});
+
+document.getElementById('signup-form').addEventListener('submit', event => {
+    event.preventDefault();
+
+    const user_name = document.getElementById('signup-input-user').value;
+    const password = document.getElementById('signup-input-password').value;
+
+    const newUser = {
+        user_name: user_name,
+        password: password
+    }
+    // for sending over name to all pages
+    localStorage.setItem("signup-flag", "true");
+    localStorage.setItem("user", JSON.stringify(newUser));
+    window.location.replace("./main_menu.html");
     event.target.reset();
 });
 
