@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/kapaha/castle-game#readme",
     "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^5.2.7",
         "eslint": "^7.30.0",
         "eslint-config-airbnb-base": "^14.2.1",
