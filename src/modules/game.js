@@ -333,17 +333,6 @@ function handlePause() {
         pauseButton.textContent = second;
     }
 }
-
-/**
- * It stops the game, sets the game state to the menu, and shows the start page
- */
-function handleHomeButtonClick() {
-    if (gameState === GAMESTATES.PAUSED) handlePause();
-    engine.stop();
-    gameState = GAMESTATES.MENU;
-    //hideElement(gamePage);
-    window.location.replace("../main_menu.html");
-}
 /**
  * Handles WASD key inputs to select enemies
  * @param event - The event object that is passed to the event handler.
@@ -410,6 +399,36 @@ function handleWASD(event) {
 }
 
 /**
+ * It stops the game, sets the game state to the menu, and shows the start page
+ */
+function handleHomeButtonClick() {
+    if (gameState === GAMESTATES.PAUSED) handlePause();
+    engine.stop();
+    gameState = GAMESTATES.MENU;
+    //hideElement(gamePage);
+    window.location.replace("../main_menu.html");
+}
+
+const yesBtn = document.querySelector('#yesBtn');
+const noBtn = document.querySelector('#noBtn');
+
+function showLeaveMenu() {
+    document.querySelector("#leaveMenu").style.display = "flex";
+}
+
+function hideLeaveMenu() {
+    document.querySelector("#leaveMenu").style.display = "none";
+}
+
+function redirectToMainMenu() {
+    if (gameState === GAMESTATES.PAUSED) handlePause();
+    engine.stop();
+    gameState = GAMESTATES.MENU;
+    //hideElement(gamePage);
+    window.location.replace("../main_menu.html");
+}
+
+/**
  * It adds event listeners to the buttons and form, and starts the game
  */
 function init() {
@@ -420,8 +439,11 @@ function init() {
     pauseButton.addEventListener('click', handlePause);
     continueBtn.addEventListener('click', continueUnPause);
     answerForm.addEventListener('submit', handleAnswerSubmit);
-    homeButton.addEventListener('click', handleHomeButtonClick);
     document.addEventListener('keydown', handleWASD);
+
+    homeButton.addEventListener('click', showLeaveMenu);
+    yesBtn.addEventListener('click', redirectToMainMenu);
+    noBtn.addEventListener('click', hideLeaveMenu);
 }
 
 export default Object.freeze({

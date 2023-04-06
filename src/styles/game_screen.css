@@ -641,10 +641,64 @@ div {
     background-repeat: no-repeat;
 }
 
+#leaveMenu {
+    height: 500px;
+    width: 50%;
+    color: #f3f2c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#leaveMenu{
+    display: none;
+    z-index: 101;
+}
+
 #pauseMenu {
     display:none;
     z-index: 100;
 }
+
+.leaveInfo {
+    --border-size: 30px;
+    --border-radius: 30px;
+    background-color: #774526;
+    width: 400px;
+    height: 800px;
+    border: var(--border-size) solid #ce7f54;
+    border-radius: var(--border-radius);
+    position: relative;
+    display: grid; /* Change from 'flex' to 'grid' */
+    grid-template-columns: 1fr; /* Add this line to create a single column grid */
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px; /* Add this line to create space between child elements */
+}
+
+.leaveInfo::before {
+    --offset: 67px;
+    background: none;
+    border: 30px solid #774526;
+    border-radius: var(--border-radius);
+    content: '';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--border-size) - var(--offset));
+    right: calc(var(--border-size) - var(--offset));
+    bottom: calc(var(--border-size) - var(--offset));
+    left: calc(var(--border-size) - var(--offset));
+    margin-top: 0px;
+}
+
+
 .pauseInfo::before {
     --offset: 67px;
     background: none;
@@ -662,6 +716,8 @@ div {
     left: calc(var(--border-size) - var(--offset));
     margin-top: 0px;
 }
+
+
 .pauseInfo {
     --border-size: 30px;
     --border-radius: 30px;
@@ -679,6 +735,7 @@ div {
     gap: 20px; /* Add this line to create space between child elements */
 }
 
+
 #pauseMenu .title {
     margin-bottom: 0; /* Remove the margin-bottom */
 }
@@ -693,7 +750,7 @@ div {
     margin-bottom: 0; /* Remove the margin-bottom */
 }
 
-#goHomeBtn {
+#goHomeBtn, #pause-restart-button, #yesBtn, #noBtn, #continueBtn {
     background-color: #ce7f54;
     color: white;
     height: 100px;
@@ -702,23 +759,9 @@ div {
     border: 2px solid rgba(255, 255, 255, 0.4);
     margin-top: 20px; /* Add some margin-top for separation */
 }
-#pause-restart-button {
-    background-color: #ce7f54;
-    color: white;
-    height: 100px;
-    width: 100%;
-    box-shadow: 0px 8px 0px #5b321c;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    margin-top: 20px; /* Add some margin-top for separation */
-}
-#continueBtn {
-    background-color: #ce7f54;
-    color: white;
-    height: 100px;
-    width: 100%;
-    box-shadow: 0px 8px 0px #5b321c;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    margin-top: 20px; /* Add some margin-top for separation */
+
+#restart-button:hover, #goHomeBtn:hover, #pause-restart-button:hover, #yesBtn:hover, #noBtn:hover, #continueBtn:hover {
+	transform: scale(0.9);
 }
 
 /* ********  GAME-OVER-PAGE  ******** */

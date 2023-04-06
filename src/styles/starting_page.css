@@ -108,6 +108,7 @@ div { position: absolute; }
 	left: 352px;
 	width: 1215px;
 	height: 439px;
+	z-index: 10;
 }
 
 
