@@ -5,6 +5,13 @@
     --ui-text: #f3f2c9;
     --ui-red: #f14f52;
 }
+
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard syntax */
+}
 /*
 	@name game_screen
 */
