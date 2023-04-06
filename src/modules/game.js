@@ -176,7 +176,9 @@ function handleSelectEnemy(event) {
     const clickedEnemy = enemies.find(
         (enemy) => enemy.element === event.currentTarget
     );
-
+    
+    //console.log(clickedEnemy.getX());
+    //console.log(clickedEnemy.getY());
     if (clickedEnemy === selectedEnemy) return;
 
     if (selectedEnemy) selectedEnemy.toggleSelect();
@@ -362,7 +364,7 @@ function handleWASD(event) {
     switch (event.key.toLowerCase()) {
         case 'w':
             const enemyAbove = enemies.reduce((closest, enemy) => {
-                if (enemy.getY() < currentY && Math.abs(enemy.getX() - currentX) <= 1) {
+                if (enemy.getY() < currentY) {
                     if (!closest || enemy.getY() > closest.getY()) {
                         return enemy;
                     }
@@ -373,7 +375,7 @@ function handleWASD(event) {
             break;
         case 's':
             const enemyBelow = enemies.reduce((closest, enemy) => {
-                if (enemy.getY() > currentY && Math.abs(enemy.getX() - currentX) <= 1) {
+                if (enemy.getY() > currentY) {
                     if (!closest || enemy.getY() < closest.getY()) {
                         return enemy;
                     }
