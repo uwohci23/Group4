@@ -104,7 +104,7 @@ function Enemy({
     }
 
     function getY(){
-        return position.x
+        return position.y
     }
     return Object.freeze({
         update,
