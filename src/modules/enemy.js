@@ -5,8 +5,6 @@ const ENEMY_EVENT_TYPES = Object.freeze({
     QUESTION_ANSWERED: 1,
 });
 
-let selectedEnemyIndex = -1;
-
 function Enemy({
     position: { x, y },
     speed,
@@ -15,8 +13,6 @@ function Enemy({
     handleSelectEnemy,
     damageCastle,
     deleteEnemy,
-    enemies,
-    
 } = {}) {
     const enemySpriteSheet = createEnemySpriteSheet();
     const width = enemySpriteSheet.frameWidth;
@@ -24,64 +20,6 @@ function Enemy({
     const position = { x, y };
     const element = createElement();
     const events = [];
-
-    
-    function handleKeyboardSelectEnemy(event, enemyElement, enemies) {
-        //console.log(enemies);
-        if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].includes(event.code)) {
-            let currentIndex = enemies.findIndex(enemy => enemy.element === enemyElement);
-            let newIndex;
-    
-            const isSameLane = (enemy1, enemy2) => {
-                const laneTolerance = 10;
-                return Math.abs(enemy1.y - enemy2.y) < laneTolerance;
-            };
-    
-            const laneEnemies = (enemies, enemy) => enemies.filter(e => isSameLane(e, enemy));
-    
-            switch (event.code) {
-                case 'KeyW': // move up
-                    newIndex = currentIndex;
-                    while (newIndex > 0) {
-                        newIndex--;
-                        if (!isSameLane(enemies[currentIndex], enemies[newIndex])) {
-                            break;
-                        }
-                    }
-                    break;
-                case 'KeyA': // move left
-                    newIndex = currentIndex;
-                    while (newIndex > 0 && isSameLane(enemies[currentIndex], enemies[newIndex - 1])) {
-                        newIndex--;
-                    }
-                    break;
-                case 'KeyS': // move down
-                    newIndex = currentIndex;
-                    while (newIndex < enemies.length - 1) {
-                        newIndex++;
-                        if (!isSameLane(enemies[currentIndex], enemies[newIndex])) {
-                            break;
-                        }
-                    }
-                    break;
-                case 'KeyD': // move right
-                    newIndex = currentIndex;
-                    while (newIndex < enemies.length - 1 && isSameLane(enemies[currentIndex], enemies[newIndex + 1])) {
-                        newIndex++;
-                    }
-                    break;
-            }
-            
-            if (newIndex >= 0 && newIndex < enemies.length) {
-                handleSelectEnemy(event, enemies[newIndex].element);
-            }
-        }
-    }
-    
-    
-    
-
-
 
     // PRIVATE FUNCTIONS
 
@@ -107,11 +45,7 @@ function Enemy({
 
         enemyElement.appendChild(questionElement);
 
-
-        enemyElement.addEventListener('click', (event) => handleSelectEnemy(event, enemyElement));
-
-        // Update this line to pass the 'enemies' array as an argument
-        document.addEventListener('keydown', (event) => handleKeyboardSelectEnemy(event, enemyElement, enemies));
+        enemyElement.addEventListener('click', handleSelectEnemy);
 
         return enemyElement;
     }
@@ -164,10 +98,14 @@ function Enemy({
             events,
         };
     }
-    function updateEnemiesList(newEnemiesList) {
-        enemies = newEnemiesList;
+
+    function getX(){
+        return position.x
     }
 
+    function getY(){
+        return position.x
+    }
     return Object.freeze({
         update,
         draw,
@@ -176,13 +114,12 @@ function Enemy({
         addEvent,
         getQuestionInfo,
         question,
-        updateEnemiesList,
+        getX,
+        getY,
         get element() {
             return element;
         },
     });
-
-
 }
 
 function createEnemyEvent(type, answerValue = null, answerIsCorrect = false) {
@@ -195,6 +132,4 @@ function createEnemyEvent(type, answerValue = null, answerIsCorrect = false) {
     };
 }
 
-
 export { Enemy as default, createEnemyEvent, ENEMY_EVENT_TYPES };
-

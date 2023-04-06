@@ -67,7 +67,6 @@ function spawnEnemy() {
         handleSelectEnemy,
         damageCastle,
         deleteEnemy,
-        enemies,
     });
     settings.enemySpeed += settings.enemySpeedIncrement;
     gameBoard.element.appendChild(enemy.element);
@@ -144,14 +143,16 @@ function handleAnswerSubmit(event) {
     if (enemyEvent.answer.value === correctAnswer) {
         enemyEvent.answer.isCorrect = true;
         selectedEnemy.handleDelete();
-        deleteEnemy(selectedEnemy.element); // Remove the enemy from the enemies array
 
-        // Update the enemies list in every remaining enemy
-        enemies.forEach(enemy => {
-            enemy.updateEnemiesList(enemies);
-        });
+        const selectedIndex = enemies.indexOf(selectedEnemy);
+        const nextEnemy = enemies[selectedIndex + 1] || enemies[0];
 
-        selectedEnemy = null;
+        if (nextEnemy) {
+            handleSelectEnemy({ currentTarget: nextEnemy.element });
+        } else {
+            selectedEnemy = null;
+        }
+
         scoreHandler.addPoints(settings.POINTS.CORRECT_ANSWER);
     } else {
         enemyEvent.answer.isCorrect = false;
@@ -169,40 +170,20 @@ function handleAnswerSubmit(event) {
  * @param enemyElement - The enemy element that was clicked.
  * @returns the value of the variable selectedEnemy.
  */
-function handleSelectEnemy(event, enemyElement) {
+function handleSelectEnemy(event) {
     answerInput.focus();
 
-    if (event) {
-        event.stopPropagation();
-    }
-
-    const clickedEnemyElement = enemyElement;
-    const clickedEnemyIndex = enemies.findIndex(
-        (enemy) => enemy.element === clickedEnemyElement
+    const clickedEnemy = enemies.find(
+        (enemy) => enemy.element === event.currentTarget
     );
 
-    if (clickedEnemyIndex !== -1 && enemies[clickedEnemyIndex] === selectedEnemy) return;
+    if (clickedEnemy === selectedEnemy) return;
 
-    if (selectedEnemy) {
-        selectedEnemy.toggleSelect();
-        const arrowToRemove = selectedEnemy.element.querySelector('#arrow');
-        if (arrowToRemove) {
-            arrowToRemove.remove();
-        }
-    }
+    if (selectedEnemy) selectedEnemy.toggleSelect();
 
-    const clickedEnemy = enemies[clickedEnemyIndex];
-    if (clickedEnemy) { // Check if clickedEnemy is not undefined
-        clickedEnemy.toggleSelect();
+    clickedEnemy.toggleSelect();
 
-        const arrow = document.querySelector('#arrow');
-        const arrowClone = arrow.cloneNode(true);
-        arrowClone.removeAttribute('style');
-        arrowClone.setAttribute('id', 'arrow');
-        clickedEnemy.element.appendChild(arrowClone);
-
-        selectedEnemy = clickedEnemy;
-    }
+    selectedEnemy = clickedEnemy;
 }
 
 /**
@@ -256,7 +237,7 @@ function start(selectedDifficulty) {
 function restart() {
     reset();
     hideElement(gameOverPage);
-    showElement(gamePage, 'flex');
+    //showElement(gamePage, 'flex');
     gameState = GAMESTATES.RUNNING;
 }
 /**
@@ -352,26 +333,6 @@ function handlePause() {
 }
 
 /**
- * When the start button is clicked, hide the start page and show the difficulty select page.
- */
-function handleStartButtonClick() {
-    hideElement(startPage);
-    showElement(difficultySelectPage, 'flex');
-}
-
-/**
- * When the user clicks on a difficulty button, hide the difficulty select page and show the game page,
- * then start the game with the selected difficulty
- * @param event - The event object that was triggered.
- */
-function handleDifficultySelect(event) {
-    const selectedDifficulty = event.target.dataset.difficulty;
-    hideElement(difficultySelectPage);
-    showElement(gamePage, 'flex');
-    start(selectedDifficulty);
-}
-
-/**
  * It stops the game, sets the game state to the menu, and shows the start page
  */
 function handleHomeButtonClick() {
@@ -380,6 +341,70 @@ function handleHomeButtonClick() {
     gameState = GAMESTATES.MENU;
     //hideElement(gamePage);
     window.location.replace("../main_menu.html");
+}
+/**
+ * Handles WASD key inputs to select enemies
+ * @param event - The event object that is passed to the event handler.
+ */
+function handleWASD(event) {
+    if (gameState !== GAMESTATES.RUNNING || enemies.length === 0) return;
+
+    if (!selectedEnemy) {
+        handleSelectEnemy({ currentTarget: enemies[0].element });
+        return;
+    }
+
+    let currentX = selectedEnemy.getX();
+    let currentY = selectedEnemy.getY();
+
+    console.log(currentX);
+    console.log(currentY);
+    switch (event.key.toLowerCase()) {
+        case 'w':
+            const enemyAbove = enemies.reduce((closest, enemy) => {
+                if (enemy.getY() < currentY && Math.abs(enemy.getX() - currentX) <= 1) {
+                    if (!closest || enemy.getY() > closest.getY()) {
+                        return enemy;
+                    }
+                }
+                return closest;
+            }, null);
+            if (enemyAbove) handleSelectEnemy({ currentTarget: enemyAbove.element });
+            break;
+        case 's':
+            const enemyBelow = enemies.reduce((closest, enemy) => {
+                if (enemy.getY() > currentY && Math.abs(enemy.getX() - currentX) <= 1) {
+                    if (!closest || enemy.getY() < closest.getY()) {
+                        return enemy;
+                    }
+                }
+                return closest;
+            }, null);
+            if (enemyBelow) handleSelectEnemy({ currentTarget: enemyBelow.element });
+            break;
+        case 'a':
+            const enemyLeft = enemies.reduce((closest, enemy) => {
+                if (enemy.getX() < currentX && Math.abs(enemy.getY() - currentY) <= 1) {
+                    if (!closest || enemy.getX() > closest.getX()) {
+                        return enemy;
+                    }
+                }
+                return closest;
+            }, null);
+            if (enemyLeft) handleSelectEnemy({ currentTarget: enemyLeft.element });
+            break;
+        case 'd':
+            const enemyRight = enemies.reduce((closest, enemy) => {
+                if (enemy.getX() > currentX && Math.abs(enemy.getY() - currentY) <= 1) {
+                    if (!closest || enemy.getX() < closest.getX()) {
+                        return enemy;
+                    }
+                }
+                return closest;
+            }, null);
+            if (enemyRight) handleSelectEnemy({ currentTarget: enemyRight.element });
+            break;
+    }
 }
 
 /**
@@ -394,7 +419,7 @@ function init() {
     continueBtn.addEventListener('click', continueUnPause);
     answerForm.addEventListener('submit', handleAnswerSubmit);
     homeButton.addEventListener('click', handleHomeButtonClick);
-    
+    document.addEventListener('keydown', handleWASD);
 }
 
 export default Object.freeze({
