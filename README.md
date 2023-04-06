@@ -8,7 +8,7 @@ To clone this repository, you will need [Git](https://git-scm.com/) and [Node.js
 #env:NODE_OPTIONS=--openssl-legacy-provider
 
 # Clone this repository
-git clone https://github.com/kapaha/math-castle.git
+git clone https://github.com/uwohci23/Group4.git
 
 # Go into the repository directory
 cd math-castle
