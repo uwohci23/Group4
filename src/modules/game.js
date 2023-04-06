@@ -359,8 +359,8 @@ function handleWASD(event) {
     let currentX = selectedEnemy.getX();
     let currentY = selectedEnemy.getY();
 
-    console.log(currentX);
-    console.log(currentY);
+    //console.log(currentX);
+    //console.log(currentY);
     switch (event.key.toLowerCase()) {
         case 'w':
             const enemyAbove = enemies.reduce((closest, enemy) => {

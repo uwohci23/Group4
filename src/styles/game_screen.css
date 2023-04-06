@@ -497,7 +497,7 @@ div {
     height: 100%;
     position: absolute;
     top: 0;
-    right: -100px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -527,11 +527,15 @@ div {
     bottom: 97%;
 }
 
-.enemy.selected .enemy-question {
-    border: black solid 0.2rem;
+.enemy.selected .enemy-question::before {
+    content: url('../images/enemyArrow.png');
+    position: absolute;
+    left: 100%;
+    bottom: 1.4rem;
+    width: 0.2rem; /* adjust the width of the image */
+    height: 0.2rem; /* adjust the height of the image */
+    transform: rotate(180deg);
     font-size: 1.3rem;
-    padding-top: 0.2em;
-    bottom: 95%;
 }
 
 .not-clickable {
