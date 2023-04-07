@@ -13,66 +13,195 @@
  *
 */
  -->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
-	<head>
-		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>skills_tree</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="" >
-		<link rel="StyleSheet" href="./styles/skills_tree.css" />
-		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-		<!-- Add your custom HEAD content here -->
-
-	</head>
-	<body>
-		<div id="content-container" >
-			<div id="_bg__skills_tree"  ></div>
-			<img src="images/cloud4.png" id="cloud" />
-			<img src="images/cloud_ek14.png" id="cloud_ek1" />
-			<img src="images/cloud_ek24.png" id="cloud_ek2" />
-			<img src="images/cloud_ek34.png" id="cloud_ek3" />
-			<div id="rectangle_15"  ></div>
-			<div id="_2_skill_point" >
-				2 Skill Point
-			</div>
-			<div id="_3_skill_point" >
-				3 Skill Point
-			</div>
-			<div id="_4_skill_point" >
-				4 Skill Point
-			</div>
-			<div id="rectangle_30"  ></div>
-			<div id="rectangle_24"  ></div>
-			<img src="images/rectangle_22.png" id="rectangle_22" />
-			<div id="rectangle_18"  ></div>
-			<div id="rectangle_25"  ></div>
-			<img src="images/arrow_2.png" id="arrow_2" />
-			<div id="rectangle_19"  ></div>
-			<div id="rectangle_23"  ></div>
-			<img src="images/arrow_1.png" id="arrow_1" />
-			<img src="images/arrow_3.png" id="arrow_3" />
-			<img src="images/arrow_4.png" id="arrow_4" />
-			<img src="images/arrow_5.png" id="arrow_5" />
-			<img src="images/arrow_6.png" id="arrow_6" />
-			<img src="images/arrow_7.png" id="arrow_7" />
-			<div id="rectangle_20"  ></div>
-			<div id="rectangle_21"  ></div>
-			<img src="images/rectangle_17.png" id="rectangle_17" />
-			<div id="rectangle_28"  ></div>
-			<a id="_rectangle_29_link" href="./main_menu.html" >
-			<div id="_rectangle_29"  ></div>
-			</a>
-			<div id="back" >
-				Back
-			</div>
-			<div id="skill_tree" >
-				Skill  Tree
-			</div>
-			<div id="_1_skill_point" >
-				1 Skill Point
-			</div>
-
-		</div>
-	</body>
-</html>
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+	 <head>
+		 <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		 <title>skills_tree</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <meta name="description" content="" >
+		 <link rel="StyleSheet" href="./styles/skills_tree.css" />
+		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+		 <!-- Add your custom HEAD content here -->
+ 
+	 </head>
+	 <body>
+		 <div id="content-container" >
+			 <div id="_bg__skills_tree"  ></div>
+			 <img src="images/cloud4.png" id="cloud" />
+			 <img src="images/cloud_ek14.png" id="cloud_ek1" />
+			 <img src="images/cloud_ek24.png" id="cloud_ek2" />
+			 <img src="images/cloud_ek34.png" id="cloud_ek3" />
+			 <div id="rectangle_15"  ></div>
+			 <div id="_2_skill_point" >
+				 2 Skill Point
+			 </div>
+			 <div id="_3_skill_point" >
+				 3 Skill Point
+			 </div>
+			 <div id="_4_skill_point" >
+				 4 Skill Point
+			 </div>
+			 <div id="header"  ></div>
+			 <div id="sp11" tabindex="0" ></div>
+ 
+			 <div id="sp12" tabindex="0" ></div>
+			 <div id="sp13" tabindex="0" ></div>
+			 <div id="sp22" tabindex="0" ></div>
+			 <div id="sp23" tabindex="0" ></div>
+			 <div id="sp31" tabindex="0" ></div>
+			 <div id="sp32" tabindex="0" ></div>
+			 <div id="sp42" tabindex="0" ></div>
+		 
+			 <img src="images/arrow_2.png" id="arrow_2" />
+			 <img src="images/arrow_1.png" id="arrow_1" />
+			 <img src="images/arrow_3.png" id="arrow_3" />
+			 <img src="images/arrow_4.png" id="arrow_4" />
+			 <img src="images/arrow_5.png" id="arrow_5" />
+			 <img src="images/arrow_6.png" id="arrow_6" />
+			 <img src="images/arrow_7.png" id="arrow_7" />
+			 
+			 
+			 
+			 <a id="backlink" href="./main_menu.html">		
+				 <div id="backbtn" ></div>
+				 <div id="back" >Back</div>
+			 </a>
+	 
+ 
+			 <div id="buybtn" >Buy</div>
+ 
+	 
+			 <script>
+				 //import {change11} from './skills_tree';
+				 const btns = [document.getElementById("sp11"), document.getElementById("sp12"), document.getElementById("sp13"), document.getElementById("sp22"), 
+							 document.getElementById("sp23"), document.getElementById("sp31"), document.getElementById("sp32"), document.getElementById("sp42")]
+			 
+ 
+				 const button2 = document.getElementById("buybtn");
+ 
+				 const btnsClicked = [false,false,false,false,false,false,false,false];
+				 let button2Clicked = false;
+ 
+				 function setAllFalse(exclude = -1){
+					 for(let i = 0; i < btnsClicked.length; i++){
+						 if(exclude != -1){
+							 if(i == exclude){
+								 continue;
+							 }
+						 }
+						 btnsClicked[i] = false;
+					 }
+				 }
+				 let oneClicked = false;
+				 let index = -1;
+				 function checkButtons() {
+			 
+					 for(let i = 0; i < btns.length; i++){
+						 if(btnsClicked[i] == true){
+							 oneClicked = true;
+							 index = i;
+							 break;
+						 }
+					 }
+			 
+					 if(!oneClicked && button2Clicked == true){
+ 
+						 button2Clicked = false;
+					 }
+					 if (oneClicked && button2Clicked) {
+						 if(index == 0){
+							 console.log("asda");
+							 change11();
+						 }
+						 else if(index == 1){
+							 change12();
+						 }
+						 else if(index == 2){
+							 change13();
+						 }
+						 else if(index == 3){
+							 change22();
+						 }
+						 else if(index == 4){
+							 change23();
+						 }
+						 else if(index == 5){
+							 change31();
+						 }
+						 else if(index == 6){
+							 change32();
+						 }
+						 else if(index == 7){
+							 change42();
+						 }
+						 // Both buttons have been clicked, execute your function here
+						 console.log("Both buttons clicked!");
+						 oneClicked = false;
+						 setAllFalse();
+						 index = -1;
+						 button2Clicked = false;
+						 
+						 
+ 
+					 }
+				 
+				 }
+				 
+				 btns[0].addEventListener("click", function() {
+					 btnsClicked[0] = true;
+					 setAllFalse(0);
+					 checkButtons();
+				 });
+				 btns[1].addEventListener("click", function() {
+					 btnsClicked[1] = true;
+					 setAllFalse(1);
+					 checkButtons();
+				 });
+				 btns[2].addEventListener("click", function() {
+					 btnsClicked[2] = true;
+					 setAllFalse(2);
+					 checkButtons();
+				 });
+				 btns[3].addEventListener("click", function() {
+					 btnsClicked[3] = true;
+					 setAllFalse(3);
+					 checkButtons();
+				 });
+				 btns[4].addEventListener("click", function() {
+					 btnsClicked[4] = true;
+					 setAllFalse(4);
+					 checkButtons();
+				 });
+				 btns[5].addEventListener("click", function() {
+					 btnsClicked[5] = true;
+					 setAllFalse(5);
+					 checkButtons();
+				 });
+				 btns[6].addEventListener("click", function() {
+					 btnsClicked[6] = true;
+					 setAllFalse(6);
+					 checkButtons();
+				 });
+				 btns[7].addEventListener("click", function() {
+					 btnsClicked[7] = true;
+					 setAllFalse(7);
+					 checkButtons();
+				 });
+				 button2.addEventListener("click", function() {
+					 button2Clicked = true;
+					 checkButtons();
+ 
+				 });
+			 </script>
+ 
+			 <div id="skill_tree" >
+				 Skill  Tree
+			 </div>
+			 <div id="_1_skill_point" >
+				 1 Skill Point
+			 </div>
+ 
+		 </div>
+	 </body>
+ </html>

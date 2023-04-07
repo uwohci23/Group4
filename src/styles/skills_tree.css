@@ -1,6 +1,7 @@
 /*
 	@name skills_tree
 */
+/* Only edit this if you know what you are doing! */
 
 body {
     -webkit-user-select: none; /* Safari */
@@ -8,7 +9,7 @@ body {
     -ms-user-select: none; /* Internet Explorer */
     user-select: none; /* Standard syntax */
 }
-/* Only edit this if you know what you are doing! */
+
 body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
 
 /* Only edit this if you know what you are doing! */
@@ -123,7 +124,7 @@ div { position: absolute; }
 }
 
 
-#rectangle_30 {
+#header {
 	top: 75px;
 	left: 51px;
 	width: 1787px;
@@ -136,66 +137,169 @@ div { position: absolute; }
 	background:rgba(109,65,40,1);
 }
 
+#sp11 {
+	top: 222px;
+	left: 660px;
+	width: 116px;
+	height: 115px;
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/stopwatch.png") center no-repeat, rgba(109,65,40,1);
 
-#rectangle_24 {
-	top: 868px;
+}
+
+#sp11:hover {
+	transform: scale(1.1);
+}
+#sp11:focus {
+	border-color:  green;
+}
+
+
+#sp12 {
+	top: 222px;
 	left: 982px;
 	width: 116px;
 	height: 115px;
-	background:rgba(109,65,40,1);
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/spddown.png") center no-repeat, rgba(109,65,40,1);
 }
 
+#sp12:hover {
+	transform: scale(1.1);
+}
+#sp12:focus {
+	border-color:  green;
+}
 
-#rectangle_22 {
-	top: 643.5px;
-	left: 666px;
+#sp13 {
+	top: 222px;
+	left: 1321px;
 	width: 116px;
 	height: 115px;
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/lives.png") center no-repeat, rgba(109,65,40,1);
+}
+#sp13:focus {
+	border-color:  green;
 }
 
+#sp13:hover {
+	transform: scale(1.1);
+}
 
-#rectangle_18 {
+#sp22 {
 	top: 425px;
 	left: 982px;
 	width: 116px;
 	height: 115px;
-	background:rgba(109,65,40,1);
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/spddown.png") center no-repeat, rgba(109,65,40,1);
+}
+#sp22:focus {
+	border-color:  green;
 }
 
+#sp22:hover {
+	transform: scale(1.1);
+}
 
-#rectangle_25 {
-	top: 420px;
+#sp23 {
+	top: 425px;
 	left: 1324px;
 	width: 116px;
 	height: 115px;
-	background:rgba(109,65,40,1);
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/livesup.png") center no-repeat, rgba(109,65,40,1);
 }
 
-
-#arrow_2 {
-	top: 365px;
-	left: 1319px;
-	width: 121.1px;
-	height: 0px;
+#sp23:hover {
+	transform: scale(1.1);
+}
+#sp23:focus {
+	border-color:  green;
 }
 
-
-#rectangle_19 {
-	top: 644px;
-	left: 982px;
-	width: 116px;
-	height: 115px;
-	background:rgba(109,65,40,1);
-}
-
-
-#rectangle_23 {
+#sp31 {
 	top: 644px;
 	left: 666px;
 	width: 116px;
 	height: 115px;
-	background:rgba(109,65,40,1);
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/stopwatchup.png") center no-repeat, rgba(109,65,40,1);
 }
+
+#sp31:hover {
+	transform: scale(1.1);
+}
+#sp31:focus {
+	border-color:  green;
+}
+
+#sp32 {
+	top: 644px;
+	left: 982px;
+	width: 116px;
+	height: 115px;
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/spddown.png") center no-repeat, rgba(109,65,40,1);
+}
+
+#sp32:hover {
+	transform: scale(1.1);
+}
+#sp32:focus {
+	border-color:  green;
+}
+
+#sp42 {
+	top: 868px;
+	left: 982px;
+	width: 116px;
+	height: 115px;
+	transition: transform 0.2s ease-in-out;
+	border: solid;
+	border-width: 6px;
+	border-radius: 25px;
+	background:url("../images/spddown.png") center no-repeat, rgba(109,65,40,1);
+}
+#sp42:focus {
+	border-color:  green;
+}
+
+#sp42:hover {
+	transform: scale(1.1);
+}
+
+#arrow_2 {
+	top: 365px;
+	left: 1319px;
+	width: 124px;
+	height: 0px;
+	display: flex;
+	z-index: 50;
+}
+
 
 
 #arrow_1 {
@@ -245,43 +349,7 @@ div { position: absolute; }
 	height: 0px;
 }
 
-
-#rectangle_20 {
-	top: 222px;
-	left: 1321px;
-	width: 116px;
-	height: 115px;
-	background:rgba(109,65,40,1);
-}
-
-
-#rectangle_21 {
-	top: 222px;
-	left: 982px;
-	width: 116px;
-	height: 115px;
-	background:rgba(109,65,40,1);
-}
-
-
-#rectangle_17 {
-	top: 222px;
-	left: 660px;
-	width: 116px;
-	height: 115px;
-}
-
-
-#rectangle_28 {
-	top: 92px;
-	left: 1725px;
-	width: 70px;
-	height: 67px;
-	background:rgba(255,255,255,0);
-}
-
-
-#_rectangle_29 {
+#backbtn {
 	top: 859px;
 	left: 1460px;
 	width: 288px;
@@ -294,7 +362,33 @@ div { position: absolute; }
 	background:rgba(109,65,40,1);
 }
 
+#buybtn {
+	top: 700px;
+	left: 1460px;
+	width:  288px;
+	height: 124px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+	cursor: pointer;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#FFFFFF;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+}
 
+#buybtn:hover {
+	font-size: 60px;
+}
 #back {
 	top: 888px;
 	left: 1544px;

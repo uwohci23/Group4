@@ -13,52 +13,105 @@
  *
 */
  -->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
-	<head>
-		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>profile_screen</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="" >
-		<link rel="StyleSheet" href="./styles/profile_screen.css" />
-		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-		<!-- Add your custom HEAD content here -->
-		<script>
-			window.onload = function() {
-			var data = {
-				"title": "56xp left ",
-				"skills": [
-					"1",
-					"2",
-					"3",
-					"4",
-				],
-				"stats": [
-					"highest score: 50",
-					"number of win: 20",
-					"number of lose: 10",
-				],
-			}
-			document.getElementById('_100_xp_left').innerText = data.title;
-			
-			data.skills.forEach(item =>{
-				let temp = document.createElement("div");
-				temp.id = "skill_item";
-				temp.innerText = item;
-				document.getElementById('skill_list').appendChild(temp);
-			});	
-			data.stats.forEach(item =>{
-				let temp = document.createElement("div");
-				temp.id = "stats_item";
-				let text = document.createElement("span");
-				text.innerText = item;
-				temp.appendChild(text);
-				document.getElementById('stats_list').appendChild(temp);
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+	 <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+	 <title>profile_screen</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <meta name="description" content="">
+	 <link rel="StyleSheet" href="./styles/profile_screen.css" />
+	 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+	 <!-- Add your custom HEAD content here -->
+	 <script>
+
+		const users = [
+		{
+			user_name: "john_doe",
+			password: "john123",
+			xp: 44,
+			kills: 100,
+			wins: 20,
+			losses: 10,
+			skills: ["Skill 1", "Skill 2", "Skill 3"],
+		},
+		{
+			user_name: "jane_doe",
+			password: "jane123",
+			xp: 78,
+			kills: 150,
+			wins: 25,
+			losses: 5,
+			skills: ["Skill 1", "Skill 4", "Skill 5"],
+		},
+		{
+			user_name: "admin",
+			password: "admin123",
+			xp: 99,
+			kills: 200,
+			wins: 30,
+			losses: 15,
+			skills: ["Skill 2", "Skill 3", "Skill 6"],
+		},
+		];
+
+		localStorage.setItem("users", JSON.stringify(users));
+		function fetchData() {
+			const data = JSON.parse(localStorage.getItem("users"));
+			return data;
+		}
+
+		function getUserData(data, user_name) {
+			const user = data.find((u) => u.user_name === user_name);
+			return user;
+		}
+
+		function updateXpBar(xp) {
+			const rectangle_40 = document.getElementById("rectangle_40");
+			const percentage = xp / 100;
+			rectangle_40.style.width = `${percentage}%`;
+		}
+
+		function displaySkills(skills) {
+			const skillList = document.getElementById("skill_list");
+			skills.forEach((skill) => {
+			let skillItem = document.createElement("div");
+			skillItem.id = "skill_item";
+			skillItem.innerText = skill;
+			skillList.appendChild(skillItem);
 			});
+		}
+
+		window.onload = function () {
+		const data = fetchData();
+		const storedUser = JSON.parse(localStorage.getItem("user"));
+		const user_name = storedUser ? storedUser.user_name : data[0].user_name; // Default to the first user if not found.
+		const user = getUserData(data, user_name);
+
+		document.getElementById("username").innerText = user.user_name;
+		document.getElementById("_100_xp_left").innerText = `${user.xp} xp left`;
+
+		const stats = [
+			`Kills: ${user.kills}`,
+			`Number of wins: ${user.wins}`,
+			`Number of losses: ${user.losses}`,
+		];
+
+		stats.forEach((item) => {
+			let temp = document.createElement("div");
+			temp.id = "stats_item";
+			let text = document.createElement("span");
+			text.innerText = item;
+			temp.appendChild(text);
+			document.getElementById("stats_list").appendChild(temp);
+		});
+
+		displaySkills(user.skills);
+		updateXpBar(user.xp);
 		};
-		</script>
-	</head>
-	<body>
+	 </script>
+   </head>
+   <body>
 		<div id="content-container" >
 			<div id="_bg__profile_screen"  ></div>
 			<img src="images/cloud6.png" id="cloud" />

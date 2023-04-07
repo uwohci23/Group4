@@ -1,6 +1,27 @@
 import './styles/login_screen.css';
 // import users from './users.json';
 
+function createNewPlayer(user_name, password) {
+    const defaultSkills = []; // Empty array for new players.
+    const defaultKills = 0;
+    const defaultWins = 0;
+    const defaultLosses = 0;
+  
+    const newPlayer = {
+      user_name,
+      password,
+      skills: defaultSkills,
+      kills: defaultKills,
+      wins: defaultWins,
+      losses: defaultLosses,
+    };
+  
+    const users = JSON.parse(localStorage.getItem("users"));
+    users.push(newPlayer);
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+  
+
 document.getElementById('login-form').addEventListener('submit', event => {
     event.preventDefault();
 
@@ -17,6 +38,7 @@ document.getElementById('login-form').addEventListener('submit', event => {
             if (user_name === user.user_name && password === user.password) {
                 localStorage.setItem("signup-flag", "false");
                 localStorage.setItem("user", JSON.stringify(user));
+                createNewPlayer(user_name, password);
                 console.log(user.user_name);
                 window.location.replace("./main_menu.html");
             }

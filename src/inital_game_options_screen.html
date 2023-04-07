@@ -130,7 +130,7 @@
 			
 
 			<div id="forum">
-				<div id="mode_dropdown">
+				<div id="mode_dropdown" onchange="showAlert()">
 				<label for="mode_select" id = "mode_">Mode:</label>
 				<select id="mode_select">
 					<option value="mode1">Solo</option>
@@ -161,4 +161,9 @@
 
 		</div>
 	</body>
+	<script>
+		function showAlert() {
+		   alert("This feature is beyond the scope of this course as it is much harder to implement than anything else.");
+		}
+	 </script>
 </html>

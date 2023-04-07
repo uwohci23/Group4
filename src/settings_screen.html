@@ -29,21 +29,17 @@
             Audio Volume:
          </div>
          <div id="resolution_dropdown">
-            <select id="resolution" onchange="setVolume()">
+            <select id="resolution" onchange="showAlert()">
                <option id="_nonevolume" value="0">None</option>
                <option id="_lowvolume" value="0.2">Low</option>
                <option id="_mediumvolume" value="0.5">Medium</option>
                <option id="_highvolume" value="1">High</option>
             </select>
          </div>
-         <!-- Script to set the volume of all audio elements on the page -->
+         <!-- Script to show an alert when the drop-down menu is changed -->
          <script>
-            function setVolume() {
-               var volume = document.getElementById("resolution").value;
-               var audios = document.getElementsByTagName("audio");
-               for (var i = 0; i < audios.length; i++) {
-                  audios[i].volume = volume;
-               }
+            function showAlert() {
+               alert("The audio volume feature has not been implemented due to errors with browsers. So, no audio will be played.");
             }
          </script>
       </div>
