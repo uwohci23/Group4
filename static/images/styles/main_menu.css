@@ -1,0 +1,259 @@
+/*
+	@name main_menu
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; height: 1080px; width: 1920px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__main_menu {
+	opacity:0.9;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	background:rgba(22,182,218,1);
+}
+
+
+#cloud {
+	top: -85px;
+	left: 138px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#_profile_box {
+	top: 61px;
+	left: 81px;
+	width: 450px;
+	height: 350px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#rectangle_4 {
+	top: 79px;
+	left: 104px;
+	width: 403px;
+	height: 276px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background: url("../images/user_pic.jpg") center no-repeat;
+	background-size: 100% 100%;
+	transition: transform 0.5s;
+}
+#rectangle_4:hover {
+	transform: scale(0.9);
+}
+
+#user_4474 {
+	top: 355px;
+	left: 133px;
+	width: 366px;
+	height: 64px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+
+#cloud_ek1 {
+	top: 540px;
+	left: 976px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#cloud_ek2 {
+	top: 483px;
+	left: 27px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek3 {
+	top: 584px;
+	left: 244px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek4 {
+	top: 291px;
+	left: 1245px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek5 {
+	top: 0px;
+	left: 1055px;
+	width: 442px;
+	height: 281px;
+}
+
+
+#cloud_ek6 {
+	top: 750px;
+	left: 1456px;
+	width: 442px;
+	height: 281px;
+}
+
+
+#_rectangle_30 {
+	top: 79px;
+	left: 1072px;
+	width: 695px;
+	height: 154px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+	transition: transform 0.5s;
+}
+
+
+#rectangle_33 {
+	top: 837px;
+	left: 1072px;
+	width: 695px;
+	height: 154px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#_rectangle_32 {
+	top: 584px;
+	left: 1072px;
+	width: 695px;
+	height: 154px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#_rectangle_31 {
+	top: 332px;
+	left: 1072px;
+	width: 695px;
+	height: 154px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#settings {
+	top: 625px;
+	left: 1207px;
+	width: 441px;
+	height: 122px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+	transition: transform 0.5s;
+	
+}
+#settings:hover {
+	transform: scale(0.9);
+}
+#exit:hover {
+	transform: scale(0.9);
+}
+#skills:hover {
+	transform: scale(0.9);
+}
+
+#play:hover {
+	transform: scale(0.9);
+}
+
+
+#exit {
+	top: 877px;
+	left: 1207px;
+	width: 441px;
+	height: 122px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+
+
+#skills {
+	top: 372px;
+	left: 1207px;
+	width: 441px;
+	height: 122px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+
+
+#play {
+	top: 119px;
+	left: 1207px;
+	width: 441px;
+	height: 122px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+	transition: transform 0.5s;
+}
+
+
+
+/* Add your custom CSS here */
