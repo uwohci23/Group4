@@ -1,6 +1,37 @@
 import './styles/login_screen.css';
 // import users from './users.json';
+const users = [
+    {
+        user_name: "john_doe",
+        password: "john123",
+        xp: 44,
+        kills: 100,
+        wins: 20,
+        losses: 10,
+        skills: ["Skill 1", "Skill 2", "Skill 3"],
+    },
+    {
+        user_name: "jane_doe",
+        password: "jane123",
+        xp: 78,
+        kills: 150,
+        wins: 25,
+        losses: 5,
+        skills: ["Skill 1", "Skill 4", "Skill 5"],
+    },
+    {
+        user_name: "admin",
+        password: "admin123",
+        xp: 99,
+        kills: 200,
+        wins: 30,
+        losses: 15,
+        skills: ["Skill 2", "Skill 3", "Skill 6"],
+    },
+    ];
 
+    localStorage.setItem("users", JSON.stringify(users));
+    
 function createNewPlayer(user_name, password) {
     const defaultSkills = []; // Empty array for new players.
     const defaultKills = 0;

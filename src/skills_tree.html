@@ -17,7 +17,7 @@
  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
 	 <head>
 		 <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		 <title>skills_tree</title>
+		 <title>Math Castle</title>
 		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		 <meta name="description" content="" >
 		 <link rel="StyleSheet" href="./styles/skills_tree.css" />
@@ -73,6 +73,50 @@
  
 	 
 			 <script>
+				let settings = {
+					SPAWN_POINTS: {
+						FIRST_LANE: { x: -900, y: -165 },
+						SECOND_LANE: { x: -900, y: -20 },
+						THIRD_LANE: { x: -900, y: 125 },
+					},
+					POINTS: {
+						CORRECT_ANSWER: 10,
+						WRONG_ANSWER: -2,
+						CASTLE_LIFE_LOST: -10,
+					},
+					enemySpeed: 60,
+					enemySpeedIncrement: 1,
+					spawnTimerMs: 3500,
+					gameTimerMs: 300000,
+					questionDifficulty: 'Medium',
+					castleStartingLives: 3,
+					lastAnswersToShow: 5,
+				};
+
+				localStorage.setItem("Settings", JSON.stringify(settings));
+
+				const currentUser = JSON.parse(localStorage.getItem("user")) || "john_doe";
+				function updateUserSkills(user, newSkill) {
+					let users = JSON.parse(localStorage.getItem("users"));
+
+
+					
+					if (users) {
+						for (let i = 0; i < users.length; i++) {
+							console.log(users[i].user_name);
+							if (users[i].user_name === user.user_name) {
+								if (!users[i].skills) {
+								users[i].skills = [];
+								}
+								users[i].skills.push(newSkill);
+								localStorage.setItem("users", JSON.stringify(users));
+								break;
+							}
+						}
+					}
+					console.log(users);
+				}
+				
 				 //import {change11} from './skills_tree';
 				 const btns = [document.getElementById("sp11"), document.getElementById("sp12"), document.getElementById("sp13"), document.getElementById("sp22"), 
 							 document.getElementById("sp23"), document.getElementById("sp31"), document.getElementById("sp32"), document.getElementById("sp42")]
@@ -106,34 +150,58 @@
 					 }
 			 
 					 if(!oneClicked && button2Clicked == true){
- 
-						 button2Clicked = false;
+						alert("Please select a skill to purchase!");
+						button2Clicked = false;
 					 }
 					 if (oneClicked && button2Clicked) {
 						 if(index == 0){
-							 console.log("asda");
-							 change11();
+							settings.gameTimerMs = 400000;
+							alert("Increased game time!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "IncreasedGameTime 1");
+		
 						 }
 						 else if(index == 1){
-							 change12();
+							settings.enemySpeed = 55;
+							alert("Decreased enemy speed to 55!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "slowerEnemy 1");
 						 }
 						 else if(index == 2){
-							 change13();
+							settings.castleStartingLives = 4;
+							alert("You now how 4 starting lives!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "moreLives 1");
 						 }
 						 else if(index == 3){
-							 change22();
+							settings.enemySpeed = 50;
+							alert("Decreased enemy speed to 50!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "slowerEnemy 2");
 						 }
 						 else if(index == 4){
-							 change23();
+							settings.castleStartingLives = 5;
+							alert("You now have 5 starting lives");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "moreLives 2");
 						 }
 						 else if(index == 5){
-							 change31();
+							settings.gameTimerMs = 500000;
+							alert("Increased game time!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "IncreasedGameTime 2");
 						 }
 						 else if(index == 6){
-							 change32();
+							settings.enemySpeed = 45;
+							alert("Decreased enemy speed to 45!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "slowerEnemy 3");
 						 }
 						 else if(index == 7){
-							 change42();
+							settings.enemySpeed = 40;
+							alert("Decreased enemy speed to 40!");
+							localStorage.setItem("Settings", JSON.stringify(settings));
+							updateUserSkills(currentUser, "slowerEnemy 4");
 						 }
 						 // Both buttons have been clicked, execute your function here
 						 console.log("Both buttons clicked!");
@@ -141,8 +209,6 @@
 						 setAllFalse();
 						 index = -1;
 						 button2Clicked = false;
-						 
-						 
  
 					 }
 				 
@@ -196,7 +262,7 @@
 			 </script>
  
 			 <div id="skill_tree" >
-				 Skill  Tree
+				 Skill  Tree - points: &infin;
 			 </div>
 			 <div id="_1_skill_point" >
 				 1 Skill Point

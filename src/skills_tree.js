@@ -20,8 +20,11 @@ let settings = {
     lastAnswersToShow: 5,
 };
 
+localStorage.setItem("Settings", settings);
+
 function change11() {
     settings.gameTimerMs = 400000;
+    alert("Please select a skill to purchase!");
 }
 function change12() {
     settings.enemySpeed = 55;
