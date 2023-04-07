@@ -19,6 +19,23 @@ const settings2 = {
 };
 
 
+function getSettings() {
+    const savedSettings = localStorage.getItem("Settings");
+    if (savedSettings) {
+      return JSON.parse(savedSettings);
+    } else {
+      return null;
+    }
+  }
+  
+  // Use the retrieved settings in any other function
+  const retrievedSettings = getSettings();
+  if (retrievedSettings) {
+    console.log(retrievedSettings.enemySpeed);
+  } else {
+    console.log("No settings found in local storage");
+  }
+
 let DEFAULT_SETTINGS;
 
 if (localStorage.getItem('Settings')) {
