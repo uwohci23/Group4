@@ -8,7 +8,7 @@ const users = [
         kills: 100,
         wins: 20,
         losses: 10,
-        skills: ["Skill 1", "Skill 2", "Skill 3"],
+        skills: ["temp Skill 1", "temp Skill 2", "temp Skill 3"],
     },
     {
         user_name: "jane_doe",
@@ -17,7 +17,7 @@ const users = [
         kills: 150,
         wins: 25,
         losses: 5,
-        skills: ["Skill 1", "Skill 4", "Skill 5"],
+        skills: ["temp Skill 1", "temp Skill 4", "temp Skill 5"],
     },
     {
         user_name: "admin",
@@ -26,7 +26,7 @@ const users = [
         kills: 200,
         wins: 30,
         losses: 15,
-        skills: ["Skill 2", "Skill 3", "Skill 6"],
+        skills: ["temp Skill 2", "temp Skill 3", "temp Skill 6"],
     },
     ];
 
