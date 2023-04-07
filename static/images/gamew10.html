@@ -1,0 +1,134 @@
+<!-- 
+/*
+ *	This content is generated from the PSD File Info.
+ *	(Alt+Shift+Ctrl+I).
+ *
+ *	@desc 		
+ *	@file 		game_screen
+ *	@date 		Wednesday 22nd of March 2023 12:25:28 AM
+ *	@title 		Page 1
+ *	@author 	
+ *	@keywords 	
+ *	@generator 	Export Kit v1.3.figma
+ *
+*/
+ -->
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+     <head>
+         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+         <title>game_screen</title>
+         <style>
+            html {
+              zoom: 0.3;
+            }
+          </style>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="description" content="" >
+         <link rel="StyleSheet" href="./styles/game_screen.css" />
+         <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+         <!-- Add your custom HEAD content here -->
+ 
+     </head>
+     <body>
+        <div id="_bg__game_screen"  ></div>
+
+        <img src="images/cloud_ek81.png" id="cloud_ek1" />
+        <img src="images/cloud_ek82.png" id="cloud_ek2" />
+        <img src="images/cloud_ek83.png" id="cloud_ek3" />
+        <img src="images/cloud_ek85.png" id="cloud_ek5" />
+        <img src="images/cloud_ek86.png" id="cloud_ek6" />
+        
+        
+        <div id="content-container" >
+             <div id="menu_options"  >
+                <div id="menu_options_ek1">
+
+                    <button id="pauseBtn" class="button pause-button">Pause</button>
+    
+                    <p id="castle-lives-header">
+                        Health:
+                        <span class="ui-value" id="castle-lives"></span>
+                    </p>
+                     
+                    <p id="game-score">
+                        Score:
+                        <span class="ui-value" data-score-display></span>
+                    </p>
+    
+                    <p id="game-timer"></p>
+                 </div>
+
+                 <div id="game-board-container">
+                    <div id="game-board-menu">
+                        <p id="game-timer"></p>
+                        
+
+                    </div>
+                    <div id="game-board">
+                        <div id="castle"></div>
+                    </div>
+                </div>
+
+                <div id="solving_square_ek1"  >
+                    <div id="bottom_bar_ek1"  ></div>
+                    <div id="bottom_bar_ek2"  ></div>
+                    <div id="bottom_bar_ek3"  ></div>
+                    <div id="bottom_bar_ek4"  ></div>
+
+                    <div id="answer-form-container">
+                        <form class="answer-form">
+                            <input
+                                type="number"
+                                max="10000"
+                                id="answer-input"
+                                autocomplete="off"
+                                placeholder="ENTER YOUR ANSWER"
+                                onfocus="this.placeholder=''"
+                                onblur="this.placeholder='ENTER YOUR ANSWER'"
+                            />
+                            </form>
+                    </div>
+
+                </div>
+
+            </div>
+            
+         </div>
+
+
+         <div id="game-over-page">
+            <div class="gameover-info">
+                <h1 id="game-over-title" class="title">Game Over</h1>
+                <h2 class="title-score">
+                    Score: <span data-score-display class="score">10</span>
+                </h2>
+                <h2 class="title-score title-question-history">
+                    Question History
+                </h2>
+
+                <table id="question-history">
+                    <thead>
+                        <tr>
+                            <th>Questions</th>
+                            <th>Your Answers</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="restart-button" class="button">Restart</button>
+            </div>
+        </div>
+
+        <div id="pauseMenu">
+            <div class="pauseInfo">
+                <h1 id="game-over-title" class="title">Paused</h1>
+
+                <button id="goHomeBtn" class="button" href="gamew6.html">Home</button>
+                
+                <button id="pause-restart-button" class="button">Restart</button>
+                <button id="continueBtn" class="button">Continue</button>
+            </div>
+        </div>
+     </body>
+ </html>

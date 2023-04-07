@@ -1,0 +1,123 @@
+/*
+	@name starting_page
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x: hidden;}
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__starting_page {
+	opacity:0.9;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	background:rgba(22,182,218,1);
+}
+
+
+#cloud {
+	top: 80px;
+	left: 820px;
+	width: 712px;
+	height: 434px;
+}
+
+
+#cloud_ek1 {
+	top: 109px;
+	left: 220px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#cloud_ek2 {
+	top: 244px;
+	left: 1231px;
+	width: 507px;
+	height: 328px;
+}
+
+
+#cloud_ek3 {
+	top: 572px;
+	left: 410px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#cloud_ek4 {
+	top: 816px;
+	left: 76px;
+	width: 261px;
+	height: 163px;
+}
+
+
+#_rectangle_1 {
+	top: 658px;
+	left: 587px;
+	width: 747px;
+	height: 202px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	-ms-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	background:rgba(109,65,40,1);
+}
+
+
+#click_to_start {
+	top: 700px;
+	left: 438px;
+	width: 1065px;
+	height: 283px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 90px;
+	font-weight: bold;
+	text-align: center;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #000000;
+	color:#FFFFFF;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+#click_to_start:hover {
+	transform: scale(0.9);
+}
+
+
+#image_1 {
+	top: 156px;
+	left: 352px;
+	width: 1215px;
+	height: 439px;
+}
+
+
+#cloud_ek5 {
+	top: 666px;
+	left: 1573px;
+	width: 261px;
+	height: 163px;
+}
+
+
+
+/* Add your custom CSS here */

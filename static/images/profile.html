@@ -1,0 +1,99 @@
+<!-- 
+/*
+ *	This content is generated from the PSD File Info.
+ *	(Alt+Shift+Ctrl+I).
+ *
+ *	@desc 		
+ *	@file 		profile_screen
+ *	@date 		Tuesday 21st of March 2023 11:33:09 PM
+ *	@title 		Page 1
+ *	@author 	
+ *	@keywords 	
+ *	@generator 	Export Kit v1.3.figma
+ *
+*/
+ -->
+
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+	 <head>
+		 <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		 <title>profile_screen</title>
+         <style>
+            html {
+              zoom: 0.3;
+            }
+          </style>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <meta name="description" content="" >
+		 <link rel="StyleSheet" href="pro.css" />
+		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+		 <!-- Add your custom HEAD content here -->
+	 </head>
+	 <body>
+		 <div id="content-container" >
+			 <div id="_bg__profile_screen"  ></div>
+			 <img src="images/cloud6.png" id="cloud" />
+			 <img src="images/cloud_ek16.png" id="cloud_ek1" />
+			 <img src="images/cloud_ek26.png" id="cloud_ek2" />
+			 <img src="images/rectangle_26.png" id="rectangle_2" />
+			 <div id="rectangle_6"  ></div>
+			 <div id="rectangle_5"  ></div>
+			 <div id="left"  >
+				 <div id="title">Skills</div>
+				 <div id="skill_list">
+				 </div>
+			 </div>
+			 <div id="right">
+				 <div id="stats">Skills</div>
+				 <div id="stats_list">
+				 </div>
+			 </div>
+			 <a id="_rectangle_30_link" href="main_menu.html" >
+			 <div id="_rectangle_30"  ></div>
+				 <div id="back" >
+					 Back
+				 </div>
+			 </a>
+			 
+			 <div id="user_4474" >
+				 User 4474
+			 </div>
+			 <div id="rectangle_35"  ></div>
+			 <div id="rectangle_38"  ></div>
+			 <div id="rectangle_40"  ></div>
+			 <div id="rectangle_36"  ></div>
+			 <div id="rectangle_37"  ></div>
+			 <div id="_1" >
+				 1
+			 </div>
+			 <div id="_100_xp_left" >
+				 100 xp left
+			 </div>
+			 <div id="_2" >
+				 2
+			 </div>
+ 
+		 </div>
+	 </body>
+	 <script type="text/javascript" src="./data.js"></script>
+	 <script>
+		 document.getElementById('_100_xp_left').innerText = data.title;
+		 
+		 data.skills.forEach(item =>{
+			 let temp = document.createElement("div");
+			 temp.id = "skill_item";
+			 temp.innerText = item;
+			 document.getElementById('skill_list').appendChild(temp);
+		 });
+ 
+		 data.stats.forEach(item =>{
+			 let temp = document.createElement("div");
+			 temp.id = "stats_item";
+			 let text = document.createElement("span");
+			 text.innerText = item;
+			 temp.appendChild(text);
+			 document.getElementById('stats_list').appendChild(temp);
+		 });
+	 </script>
+ </html>

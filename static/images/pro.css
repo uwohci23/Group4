@@ -1,0 +1,356 @@
+/*
+	@name profile_screen
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1080px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__profile_screen {
+	opacity:0.9;
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1080px;
+	background:rgba(22,182,218,1);
+}
+
+
+#cloud {
+	top: -75px;
+	left: 1383px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek1 {
+	top: 436px;
+	left: -267px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#cloud_ek2 {
+	top: 774px;
+	left: 1432px;
+	width: 675px;
+	height: 408px;
+}
+
+
+#rectangle_2 {
+	top: 40px;
+	left: 40px;
+	width: 1840px;
+	height: 1000px;
+}
+
+
+#rectangle_6 {
+	top: 88px;
+	left: 118px;
+	width: 1729px;
+	height: 241px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(157.25,122.15,102.21,1);
+}
+
+
+#rectangle_5 {
+	top: 88px;
+	left: 101px;
+	width: 260px;
+	height: 241px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	/* background:rgba(148,92,63,1); */
+	background: url(./img/user_pic.jpg) center no-repeat;
+}
+
+
+#left {
+	top: 361px;
+	left: 101px;
+	width: 260px;
+	height: 501px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(157.25,122.15,102.21,1);
+}
+
+#left #title{
+	width: 260px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	overflow: auto;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#skill_list{
+	width: 100%;
+	margin-top: 80px;
+	list-style: none;
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+#skill_item{
+	width: 100%;
+	position: relative;
+	background: rgba(10,10,10,.2);	
+	border-radius: 5px;
+	text-align: center;
+}
+
+
+
+#right {
+	top: 361px;
+	left: 392px;
+	width: 1455px;
+	height: 501px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(157.25,122.15,102.21,1);
+}
+
+#right #stats{
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+	width: 1455px;
+	height: 75px;
+	line-height: 75px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+#stats_list{
+	width: 100%;
+	margin-top: 80px;
+	list-style: none;
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+#stats_item{
+	width: 100%;
+	position: relative;
+	background: rgba(10,10,10,.2);	
+	border-radius: 5px;
+}
+
+#stats_item span{
+	margin-inline-start	: 12px;
+}
+
+#_rectangle_30 {
+	top: 890px;
+	left: 1422px;
+	width: 425px;
+	height: 115px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(109,65,40,1);
+}
+
+
+#back {
+	top: 917px;
+	left: 1567px;
+	width: 149px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color:#FFFFFF;
+}
+
+#skills {
+	top: 368px;
+	left: 167px;
+	width: 183px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+
+#user_4474 {
+	top: 113px;
+	left: 392px;
+	width: 405px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+#rectangle_35 {
+	top: 206px;
+	left: 392px;
+	width: 1430px;
+	height: 100px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(217,217,217,1);
+}
+
+
+#rectangle_38 {
+	top: 216px;
+	left: 408px;
+	width: 1402px;
+	height: 80px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(104.48,210.72,210.72,1);
+}
+
+
+#rectangle_40 {
+	top: 216px;
+	left: 408px;
+	width: 1212px;
+	height: 80px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(74.53,146.62,146.62,1);
+}
+
+
+#rectangle_36 {
+	top: 210px;
+	left: 408px;
+	width: 90px;
+	height: 90px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(133.87,255,160.52,1);
+}
+
+
+#rectangle_37 {
+	top: 211px;
+	left: 1720px;
+	width: 90px;
+	height: 90px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background:rgba(133.87,255,160.52,1);
+}
+
+
+#_1 {
+	top: 225px;
+	left: 441px;
+	width: 80px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_100_xp_left {
+	top: 225px;
+	left: 979px;
+	width: 311px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_2 {
+	top: 225px;
+	left: 1753px;
+	width: 87px;
+	height: 96px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+
+/* Add your custom CSS here */
