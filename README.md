@@ -16,6 +16,9 @@ cd Group4
 ```
 npm install
 ```
+```
+npm audit fix
+```
 # Run in development mode
 ```bash
 #env:NODE_OPTIONS=--openssl-legacy-provider
