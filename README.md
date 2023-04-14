@@ -3,9 +3,7 @@
 
 To clone this repository, you will need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)).
 
-```bash
-#env:NODE_OPTIONS=--openssl-legacy-provider
-```
+
 # Clone this repository
 ```
 git clone https://github.com/uwohci23/Group4.git
@@ -19,6 +17,9 @@ cd Group4
 npm install
 ```
 # Run in development mode
+```bash
+#env:NODE_OPTIONS=--openssl-legacy-provider
+```
 ```
 npm start
 ```
