@@ -12,7 +12,7 @@ git clone https://github.com/uwohci23/Group4.git
 ```
 # Go into the repository directory
 ```
-cd math-castle
+cd Group4
 ```
 # Install dependencies
 ```
