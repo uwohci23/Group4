@@ -13,16 +13,16 @@ git clone https://github.com/uwohci23/Group4.git
 cd Group4
 ```
 # Install dependencies
+```bash
+#env:NODE_OPTIONS=--openssl-legacy-provider
+```
 ```
 npm install
 ```
 ```
 npm audit fix
 ```
-# Run in development mode
-```bash
-#env:NODE_OPTIONS=--openssl-legacy-provider
-```
+# Run the Game
 ```
 npm start
 ```
