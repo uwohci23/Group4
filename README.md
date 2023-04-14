@@ -13,12 +13,15 @@ git clone https://github.com/uwohci23/Group4.git
 cd Group4
 ```
 # Install dependencies
+Run the following line to set up the enviroment
 ```bash
 #env:NODE_OPTIONS=--openssl-legacy-provider
 ```
+Run the following line to Install dependencies
 ```
 npm install
 ```
+Run the following line to fix a known issue
 ```
 npm audit fix
 ```
@@ -26,3 +29,4 @@ npm audit fix
 ```
 npm start
 ```
+
